@@ -1,0 +1,56 @@
+/* AUEM chatbot widget */
+.auem-chat-launcher {
+  position: fixed; inset-inline-end: 1.2rem; bottom: 1.2rem; z-index: 90;
+  width: 58px; height: 58px; border-radius: 50%; border: 0; cursor: pointer;
+  background: linear-gradient(135deg, #0d5c4f, #07332c); color: #e4c95c;
+  box-shadow: 0 8px 24px rgba(7, 51, 44, .4);
+  display: flex; align-items: center; justify-content: center;
+  transition: transform .15s ease;
+}
+.auem-chat-launcher:hover { transform: scale(1.06); }
+.auem-chat-launcher svg { width: 26px; height: 26px; }
+.auem-chat-panel {
+  position: fixed; inset-inline-end: 1.2rem; bottom: 5.6rem; z-index: 90;
+  width: min(380px, calc(100vw - 2.4rem)); height: min(560px, calc(100vh - 7rem));
+  background: #fff; border-radius: 18px; box-shadow: 0 18px 50px rgba(7, 51, 44, .35);
+  display: none; flex-direction: column; overflow: hidden; border: 1px solid #e3e0d7;
+}
+.auem-chat-panel.open { display: flex; }
+.auem-chat-head {
+  background: linear-gradient(135deg, #0d5c4f, #07332c); color: #fff;
+  padding: .9rem 1rem; display: flex; align-items: center; gap: .6rem;
+}
+.auem-chat-head .dot { width: 9px; height: 9px; border-radius: 50%; background: #5fe3c8; }
+.auem-chat-head strong { font-size: .95rem; }
+.auem-chat-head small { display: block; color: #9fd8cc; font-size: .72rem; }
+.auem-chat-close {
+  margin-inline-start: auto; background: none; border: 0; color: #fff; cursor: pointer;
+  font-size: 1.15rem; line-height: 1; padding: .2rem .4rem;
+}
+.auem-chat-body { flex: 1; overflow-y: auto; padding: .9rem; display: flex; flex-direction: column; gap: .6rem; background: #f7f5f0; }
+.auem-msg { max-width: 82%; padding: .6rem .85rem; border-radius: 14px; font-size: .9rem; line-height: 1.55; }
+.auem-msg.bot {
+  background: #fff; border: 1px solid #e3e0d7; color: #1d2a28;
+  border-start-start-radius: 4px; align-self: flex-start;
+}
+.auem-msg.user {
+  background: #0d5c4f; color: #fff; align-self: flex-end;
+  border-start-end-radius: 4px;
+}
+.auem-chips { display: flex; flex-wrap: wrap; gap: .45rem; padding: .2rem 0 .4rem; }
+.auem-chip {
+  border: 1.4px solid #0d5c4f; color: #0d5c4f; background: #fff;
+  border-radius: 999px; padding: .3rem .75rem; font-size: .78rem; font-weight: 600; cursor: pointer;
+}
+.auem-chip:hover { background: #0d5c4f; color: #fff; }
+.auem-chat-input { display: flex; gap: .5rem; padding: .7rem; border-top: 1px solid #e3e0d7; background: #fff; }
+.auem-chat-input input {
+  flex: 1; font: inherit; font-size: .9rem; border: 1px solid #e3e0d7; border-radius: 999px;
+  padding: .55rem .9rem; outline: none;
+}
+.auem-chat-input input:focus { border-color: #0d5c4f; }
+.auem-chat-input button {
+  border: 0; border-radius: 50%; width: 40px; height: 40px; cursor: pointer;
+  background: #0d5c4f; color: #fff; display: flex; align-items: center; justify-content: center;
+}
+.auem-chat-input button svg { width: 17px; height: 17px; }
