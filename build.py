@@ -437,6 +437,8 @@ def main():
                 f.write(html)
     with open(os.path.join(DIST, "index.html"), "w", encoding="utf-8") as f:
         f.write(ROOT_REDIRECT)
+    with open(os.path.join(DIST, ".nojekyll"), "w", encoding="utf-8") as f:
+        f.write("")
     print(f"Built {len(RENDERERS) * len(LANGS)} pages into {DIST}")
 
 

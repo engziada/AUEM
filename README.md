@@ -25,6 +25,13 @@ python3 -m http.server 8000 --directory dist
 # open http://localhost:8000 → auto-redirects to ar/ or en/
 ```
 
+## GitHub Pages Deployment
+
+The repository is configured for automated deployment via GitHub Actions (`.github/workflows/deploy.yml`):
+1. In your GitHub repository settings, go to **Settings** → **Pages**.
+2. Under **Build and deployment** → **Source**, select **GitHub Actions**.
+3. Every push to the `main` branch will automatically run `build.py` and publish the `dist/` directory to GitHub Pages.
+
 ## Editing content
 
 Every string lives in `content.py` (paired `{"ar": ..., "en": ...}` dicts).
