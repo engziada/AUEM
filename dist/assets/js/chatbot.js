@@ -11,18 +11,66 @@
   "use strict";
 
   var BOTPRESS = {
-    enabled: false,
+    enabled: true,
+    injectUrl: "https://cdn.botpress.cloud/webchat/v3.7/inject.js",
+    configUrl: "https://files.bpcontent.cloud/2026/09/21/08/20260921084023-3L5AZOLU.json",
+    botId: "98b9ddc5-cfe5-4616-a4cc-f89a6e41230a",
+    clientId: "9948b22e-c4e5-414f-a3cf-6b4878b85886",
+    configuration: {
+      website: {},
+      email: {},
+      phone: {},
+      termsOfService: {},
+      privacyPolicy: {}
+    },
     // e.g. ["https://cdn.botpress.cloud/webchat/v3.x/inject.js",
     //       "https://files.bpcontent.cloud/XXXX/webchat/config.js"]
     scriptUrls: []
   };
 
-  if (BOTPRESS.enabled && BOTPRESS.scriptUrls.length) {
-    BOTPRESS.scriptUrls.forEach(function (src) {
-      var s = document.createElement("script");
-      s.src = src; s.async = true;
-      document.body.appendChild(s);
-    });
+  if (BOTPRESS.enabled) {
+    if (BOTPRESS.scriptUrls && BOTPRESS.scriptUrls.length) {
+      BOTPRESS.scriptUrls.forEach(function (src) {
+        var s = document.createElement("script");
+        s.src = src; s.async = true;
+        document.body.appendChild(s);
+      });
+      return;
+    }
+
+    var bpScript = document.createElement("script");
+    bpScript.src = BOTPRESS.injectUrl || "https://cdn.botpress.cloud/webchat/v3.7/inject.js";
+    bpScript.async = true;
+    bpScript.onload = function () {
+      function initBot(cfg) {
+        if (window.botpress && typeof window.botpress.init === "function") {
+          window.botpress.init(cfg);
+        }
+      }
+
+      var inlineCfg = {
+        botId: BOTPRESS.botId,
+        clientId: BOTPRESS.clientId,
+        configuration: BOTPRESS.configuration || {}
+      };
+
+      if (BOTPRESS.configUrl) {
+        fetch(BOTPRESS.configUrl)
+          .then(function (res) {
+            if (!res.ok) throw new Error("Config status " + res.status);
+            return res.json();
+          })
+          .then(function (data) {
+            initBot(data);
+          })
+          .catch(function () {
+            initBot(inlineCfg);
+          });
+      } else {
+        initBot(inlineCfg);
+      }
+    };
+    document.body.appendChild(bpScript);
     return;
   }
 

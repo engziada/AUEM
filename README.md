@@ -45,19 +45,27 @@ answers visitor questions from the embedded knowledge base
 to teach it new answers — keyword lists in `kw_ar`/`kw_en`, answers in
 `a_ar`/`a_en`.
 
-### Switching to Botpress
+### Botpress Integration
 
-1. Create a bot in [Botpress Cloud](https://app.botpress.com), train it on the
-   union's documents/FAQ.
-2. In *Webchat → Share*, copy the embed script URL(s).
-3. In `assets/js/chatbot.js` set:
+The website is integrated with Botpress Cloud Webchat v3.7 (`assets/js/chatbot.js`).
+Configuration:
 
 ```js
 var BOTPRESS = {
   enabled: true,
-  scriptUrls: ["https://cdn.botpress.cloud/webchat/v3.x/inject.js",
-               "https://files.bpcontent.cloud/<your-bot>/config.js"]
+  injectUrl: "https://cdn.botpress.cloud/webchat/v3.7/inject.js",
+  configUrl: "https://files.bpcontent.cloud/2026/09/21/08/20260921084023-3L5AZOLU.json",
+  botId: "98b9ddc5-cfe5-4616-a4cc-f89a6e41230a",
+  clientId: "9948b22e-c4e5-414f-a3cf-6b4878b85886",
+  configuration: {
+    website: {},
+    email: {},
+    phone: {},
+    termsOfService: {},
+    privacyPolicy: {}
+  },
+  scriptUrls: []
 };
 ```
 
-The built-in widget is skipped and the Botpress bubble loads instead.
+Set `BOTPRESS.enabled = false` to switch back to the built-in offline knowledge-base assistant anytime.

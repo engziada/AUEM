@@ -78,10 +78,11 @@ def base(page_id, lang, body, title=None):
       <img src="../assets/img/logo.svg" alt="{esc(L(SITE["name"], lang))}" class="brand-logo">
       <span class="brand-text"><strong>{esc(L(SITE["name"], lang))}</strong><small>{esc(SITE["abbr"])}</small></span>
     </a>
-    <button class="nav-toggle" aria-label="menu" onclick="document.body.classList.toggle('nav-open')"><span></span><span></span><span></span></button>
-    <nav class="main-nav">{nav_links}</nav>
+    <button class="nav-toggle" aria-label="menu" aria-expanded="false" aria-controls="main-nav" onclick="document.body.classList.toggle('nav-open')"><span></span><span></span><span></span></button>
+    <nav class="main-nav" id="main-nav">{nav_links}</nav>
     {switch}
   </div>
+  <div class="nav-backdrop" onclick="document.body.classList.remove('nav-open')"></div>
 </header>
 <main>{body}</main>
 <footer class="site-footer">
