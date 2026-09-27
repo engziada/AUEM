@@ -69,13 +69,13 @@ def base(page_id, lang, body, title=None):
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Cinzel:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../assets/css/style.css">
 <link rel="stylesheet" href="../assets/css/chatbot.css">
-<link rel="icon" href="../assets/img/logo.svg" type="image/svg+xml">
+<link rel="icon" href="../assets/img/AUEM_logo_only_trans.png" type="image/png">
 </head>
 <body>
 <header class="site-header">
   <div class="container header-inner">
     <a class="brand" href="index.html">
-      <img src="../assets/img/logo.svg" alt="{esc(L(SITE["name"], lang))}" class="brand-logo">
+      <img src="../assets/img/AUEM_logo_only_trans.png" alt="{esc(L(SITE["name"], lang))}" class="brand-logo">
       <span class="brand-text"><strong>{esc(L(SITE["name"], lang))}</strong><small>{esc(SITE["abbr"])}</small></span>
     </a>
     <button class="nav-toggle" aria-label="menu" aria-expanded="false" aria-controls="main-nav" onclick="document.body.classList.toggle('nav-open')"><span></span><span></span><span></span></button>
@@ -127,7 +127,7 @@ def hero(page, lang):
         <a class="btn btn-outline" href="membership.html">{esc(L(p["cta_secondary"], lang))}</a>
       </div>
     </div>
-    <div class="hero-emblem"><img src="../assets/img/logo.svg" alt="AUEM"></div>
+    <div class="hero-emblem"><img src="../assets/img/AUEM_logo_trans.png" alt="AUEM"></div>
   </div>
 </section>
 """
