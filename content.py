@@ -35,7 +35,7 @@ PAGES = {
             "en": "The Arab Union for Energy & Minerals — an institutional platform advancing joint Arab action in the energy and minerals sectors. Headquarters: Casablanca, Morocco.",
         },
         "hero_kicker": {
-            "ar": "تأسس في 23 يوليو 2026 — سلا، المملكة المغربية",
+            "ar": "تأسس الإتحاد في 23 يوليو 2026 — سلا، المملكة المغربية",
             "en": "Founded 23 July 2026 — Salé, Kingdom of Morocco",
         },
         "hero_sub": {
