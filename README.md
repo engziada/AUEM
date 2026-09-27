@@ -38,35 +38,18 @@ The repository is configured for automated deployment via GitHub Actions (`.gith
 Every string lives in `content.py` (paired `{"ar": ..., "en": ...}` dicts).
 Run `python3 build.py` to regenerate `dist/`.
 
-## Chatbot
+## Chatbot — 3-tier fallback
 
-Default: a self-contained bilingual assistant (`assets/js/chatbot.js`) that
-answers visitor questions from the embedded knowledge base
-(`KB` in `content.py` → generated `assets/js/kb.js`). Add entries to `KB`
-to teach it new answers — keyword lists in `kw_ar`/`kw_en`, answers in
-`a_ar`/`a_en`.
+`assets/js/chatbot.js` answers questions through a fallback cascade:
 
-### Botpress Integration
+1. **Botpress Free webchat** — if its script loads and initialises within 4s, its own widget takes over (100 conversations/month on the free plan). Disable with `BOTPRESS.enabled = false`.
+2. **Groq LLM** (`allam-2-7b`, SDAIA's Arabic-first model on the free tier) — retrieval-augmented with the site knowledge base. The API key is injected at build time from the `GROQ_API_KEY` environment variable (never committed). On error, falls back per-message.
+3. **Built-in offline matcher** — keyword scoring over the same knowledge base, always available, bilingual.
 
-The website is integrated with Botpress Cloud Webchat v3.7 (`assets/js/chatbot.js`).
-Configuration:
+### Setup
 
-```js
-var BOTPRESS = {
-  enabled: true,
-  injectUrl: "https://cdn.botpress.cloud/webchat/v3.7/inject.js",
-  configUrl: "https://files.bpcontent.cloud/2026/09/21/08/20260921084023-3L5AZOLU.json",
-  botId: "98b9ddc5-cfe5-4616-a4cc-f89a6e41230a",
-  clientId: "9948b22e-c4e5-414f-a3cf-6b4878b85886",
-  configuration: {
-    website: {},
-    email: {},
-    phone: {},
-    termsOfService: {},
-    privacyPolicy: {}
-  },
-  scriptUrls: []
-};
-```
+- **Local:** `$env:GROQ_API_KEY="gsk_..."` before running `python3 build.py` (optional — without it, tier 2 is skipped).
+- **CI:** add `GROQ_API_KEY` under repo *Settings → Secrets and variables → Actions*.
+- **Teach the bot:** add entries to `KB` in `content.py` (`kw_ar`/`kw_en` keywords, `a_ar`/`a_en` answers), then rebuild — all three tiers use the same knowledge base.
 
-Set `BOTPRESS.enabled = false` to switch back to the built-in offline knowledge-base assistant anytime.
+Keep the key free-tier only; it is shipped to the client, so rotate it if abused.

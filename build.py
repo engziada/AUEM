@@ -426,7 +426,8 @@ def main():
         "placeholder": CHATBOT["placeholder"], "suggestions": CHATBOT["suggestions"],
         "fallback": CHATBOT["fallback"], "entries": KB,
     }
-    kb_js = "window.AUEM_KB = " + json.dumps(kb, ensure_ascii=False, indent=1) + ";\n"
+    kb_js = ("window.AUEM_GROQ_KEY = " + json.dumps(os.environ.get("GROQ_API_KEY", "")) + ";\n"
+             "window.AUEM_KB = " + json.dumps(kb, ensure_ascii=False, indent=1) + ";\n")
     with open(os.path.join(DIST, "assets", "js", "kb.js"), "w", encoding="utf-8") as f:
         f.write(kb_js)
 
