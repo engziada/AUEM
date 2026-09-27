@@ -88,7 +88,7 @@ def base(page_id, lang, body, title=None):
 <footer class="site-footer">
   <div class="container footer-grid">
     <div>
-      <div class="footer-brand"><img src="../assets/img/logo.svg" alt="" class="brand-logo"><strong>{esc(L(SITE["name"], lang))}</strong></div>
+      <div class="footer-brand"><img src="../assets/img/AUEM_logo_only_trans.png" alt="" class="brand-logo"><strong>{esc(L(SITE["name"], lang))}</strong></div>
       <p>{esc(L(FOOTER["about"], lang))}</p>
       <p class="muted small">{esc(L(FOOTER["disclaimer"], lang))}</p>
     </div>

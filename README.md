@@ -13,7 +13,8 @@ assets/css/style.css  theme
 assets/css/chatbot.css
 assets/js/chatbot.js  chatbot widget + matcher
 assets/js/main.js
-assets/img/logo.svg
+assets/img/AUEM_logo_only_trans.png  mark only (navbar / favicon / footer)
+assets/img/AUEM_logo_trans.png       mark + wordmark (hero)
 dist/                 generated output (ar/ + en/ + root redirect)
 ```
 
