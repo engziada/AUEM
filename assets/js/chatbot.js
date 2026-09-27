@@ -17,7 +17,11 @@
   "use strict";
 
   var BOTPRESS = {
-    enabled: true,
+    // Trial ended (dead bot shows its own bubble and silently ignores users).
+    // Re-enable after creating a fresh bot on the Free plan — note: the bubble
+    // icon in that mode is Botpress's own widget, styled in Botpress Studio
+    // (branding/avatar), not from this repo's CSS.
+    enabled: false,
     injectUrl: "https://cdn.botpress.cloud/webchat/v3.7/inject.js",
     configUrl: "https://files.bpcontent.cloud/2026/09/21/08/20260921084023-3L5AZOLU.json",
     botId: "98b9ddc5-cfe5-4616-a4cc-f89a6e41230a",
