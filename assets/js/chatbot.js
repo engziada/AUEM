@@ -200,7 +200,9 @@
     var launcher = document.createElement("button");
     launcher.className = "auem-chat-launcher";
     launcher.setAttribute("aria-label", t(KB.name) || "Chat");
-    launcher.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 12a8 8 0 0 1-8 8H4l2-3a8 8 0 1 1 15-5z"/><path d="M8.5 11.5h7M8.5 14.5h4"/></svg>';
+    launcher.innerHTML =
+      '<img src="../assets/img/AUEM_logo_only_trans.png" alt="" class="auem-chat-logo">' +
+      '<span class="auem-chat-ping" aria-hidden="true"></span>';
 
     var panel = document.createElement("div");
     panel.className = "auem-chat-panel";
