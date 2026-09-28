@@ -150,6 +150,30 @@
   background: radial-gradient(circle at 50% 0%, oklch(0.82 0.14 90 / 0.06), transparent 70%);
 }
 
+/* hosted-chat embed mode (Chatbase / Botpress iframe fills the panel) */
+.auem-chat-embed {
+  flex: 1;
+  width: 100%;
+  min-height: 0;
+  border: 0;
+  border-radius: 14px;
+  background: #fff;
+  display: none; /* revealed only once its tier wins */
+}
+
+.auem-chat-panel.embedded .auem-chat-body {
+  padding: 0.6rem;
+  overflow: hidden;
+}
+
+.auem-chat-panel.embedded .auem-chat-embed {
+  display: block;
+}
+
+.auem-chat-panel.embedded .auem-chat-input {
+  display: none;
+}
+
 .auem-msg {
   max-width: 84%;
   padding: 0.75rem 1rem;

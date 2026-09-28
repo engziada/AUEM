@@ -38,18 +38,19 @@ The repository is configured for automated deployment via GitHub Actions (`.gith
 Every string lives in `content.py` (paired `{"ar": ..., "en": ...}` dicts).
 Run `python3 build.py` to regenerate `dist/`.
 
-## Chatbot — 3-tier fallback
+## Chatbot — 4-tier fallback
 
-`assets/js/chatbot.js` answers questions through a fallback cascade:
+`assets/js/chatbot.js` answers questions through a fallback cascade, always inside the site's own medallion launcher/panel (hosted services never inject their own bubbles):
 
-1. **Botpress Free webchat** — if its script loads and initialises within 4s, its own widget takes over (100 conversations/month on the free plan). Disable with `BOTPRESS.enabled = false`.
-2. **Groq LLM** (`allam-2-7b`, SDAIA's Arabic-first model on the free tier) — retrieval-augmented with the site knowledge base. The API key is injected at build time from the `GROQ_API_KEY` environment variable (never committed). On error, falls back per-message.
-3. **Built-in offline matcher** — keyword scoring over the same knowledge base, always available, bilingual.
+1. **Chatbase** — iframe embed in the panel; skipped if it fails to load within 8s.
+2. **Botpress webchat** — iframe "shareable" embed; skipped on load failure (a dead bot however loads silently — set `BOTPRESS.enabled = false` if unused).
+3. **Groq LLM** (`allam-2-7b`, SDAIA's Arabic-first model on the free tier) — retrieval-augmented with the site knowledge base. The API key is injected at build time from the `GROQ_API_KEY` environment variable (never committed). On error, falls back per-message.
+4. **Built-in offline matcher** — keyword scoring over the same knowledge base, always available, bilingual.
 
 ### Setup
 
-- **Local:** `$env:GROQ_API_KEY="gsk_..."` before running `python3 build.py` (optional — without it, tier 2 is skipped).
+- **Local:** `$env:GROQ_API_KEY="gsk_..."` before running `python3 build.py` (optional — without it, tier 3 is skipped).
 - **CI:** add `GROQ_API_KEY` under repo *Settings → Secrets and variables → Actions*.
-- **Teach the bot:** add entries to `KB` in `content.py` (`kw_ar`/`kw_en` keywords, `a_ar`/`a_en` answers), then rebuild — all three tiers use the same knowledge base.
+- **Teach the bot:** add entries to `KB` in `content.py` (`kw_ar`/`kw_en` keywords, `a_ar`/`a_en` answers), then rebuild — tiers 3 and 4 use the same knowledge base.
 
 Keep the key free-tier only; it is shipped to the client, so rotate it if abused.
