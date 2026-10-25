@@ -4,6 +4,10 @@ on:
   push:
     branches: ["main"]
   workflow_dispatch:
+  # Rebuild daily so events move from "upcoming" to "past" and expired
+  # announcements disappear even when nobody edits anything.
+  schedule:
+    - cron: "17 3 * * *"
 
 permissions:
   contents: read
@@ -26,10 +30,25 @@ jobs:
         with:
           python-version: "3.x"
 
+      - name: Install build tooling
+        run: python3 -m pip install --quiet pyyaml pillow
+
+      # Fails the build only on real schema drift (a JSON key that .pages.yml
+      # does not know about would be silently dropped by the CMS on the next
+      # save). Missing translations or images are reported as warnings.
+      - name: Validate content against the CMS config
+        run: python3 tools/check_content.py
+
       - name: Build static site
         run: python3 build.py
         env:
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+
+      # Broken links are reported but never block a deploy: a stale site is
+      # worse than a page with one missing image.
+      - name: Check built site
+        run: python3 tools/check_site.py dist
+        continue-on-error: true
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

@@ -1,0 +1,34 @@
+{
+  "title": {
+    "ar": "الفعاليات",
+    "en": "Events"
+  },
+  "meta": {
+    "ar": "فعاليات واجتماعات الاتحاد العربي للطاقة والمعادن.",
+    "en": "Events and meetings of the Arab Union for Energy & Minerals."
+  },
+  "intro": {
+    "ar": "ينظّم الاتحاد الاجتماعات والملتقيات وورش العمل التي تجمع الفاعلين الاقتصاديين في قطاعي الطاقة والمعادن على مستوى العالم العربي.",
+    "en": "The Union organises meetings, forums and workshops that bring together economic actors in the Arab energy and minerals sectors."
+  },
+  "upcoming_title": {
+    "ar": "الفعاليات القادمة",
+    "en": "Upcoming events"
+  },
+  "past_title": {
+    "ar": "فعاليات سابقة",
+    "en": "Past events"
+  },
+  "empty_upcoming": {
+    "ar": "لا توجد فعاليات قادمة معلنة حالياً. تابعونا قريباً.",
+    "en": "No upcoming events announced yet. Stay tuned."
+  },
+  "empty_past": {
+    "ar": "لا توجد فعاليات سابقة مسجّلة.",
+    "en": "No past events recorded yet."
+  },
+  "register_label": {
+    "ar": "التسجيل",
+    "en": "Register"
+  }
+}

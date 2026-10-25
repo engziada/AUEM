@@ -1,0 +1,472 @@
+{
+  "title": {
+    "ar": "اتحادات عربية شقيقة",
+    "en": "Sister Arab Unions"
+  },
+  "meta": {
+    "ar": "تعرف على الاتحادات العربية النوعية المتخصصة العاملة تحت مظلة جامعة الدول العربية ومجلس الوحدة الاقتصادية العربية.",
+    "en": "Discover the specialized Arab federations and unions operating under the League of Arab States and the Council of Arab Economic Unity."
+  },
+  "intro_title": {
+    "ar": "منظومة العمل العربي المشترك",
+    "en": "The Arab joint-action ecosystem"
+  },
+  "intro": {
+    "ar": "ينضم الاتحاد العربي للطاقة والمعادن إلى منظومة عريقة من الاتحادات العربية النوعية المتخصصة التي تعمل تحت مظلة جامعة الدول العربية (تأسست 1945، مقرها القاهرة وتضم 22 دولة عضواً). ويشرف مجلس الوحدة الاقتصادية العربية — الذي أنشئ بموجب اتفاقية 1957 ودخلت حيز النفاذ عام 1964 — على الاتحادات المهنية النوعية المتخصصة، كما يجمع «ملتقى الاتحادات العربية النوعية المتخصصة» (تأسس نهاية 2017 برعاية الأمين العام لجامعة الدول العربية) أكثر من 40 اتحاداً عربياً.",
+    "en": "The Arab Union for Energy & Minerals joins a longstanding ecosystem of specialized Arab federations operating under the League of Arab States (founded 1945, headquartered in Cairo, with 22 member states). The Council of Arab Economic Unity — established by a 1957 agreement that entered into force in 1964 — oversees specialized professional federations, while the Forum of Specialized Arab Federations (established in late 2017 under the patronage of the League's Secretary-General) brings together more than 40 Arab unions."
+  },
+  "groups": [
+    {
+      "name": {
+        "ar": "الاتحادات الاقتصادية والصناعية",
+        "en": "Economic & industrial unions"
+      },
+      "items": [
+        {
+          "name": {
+            "ar": "الاتحاد العام لغرف التجارة والصناعة والزراعة للبلاد العربية",
+            "en": "Federation of Arab Chambers of Commerce, Industry & Agriculture"
+          },
+          "est": "1951",
+          "desc": {
+            "ar": "يمثل الغرف التجارية والصناعية والزراعية في الدول العربية.",
+            "en": "Represents chambers of commerce, industry and agriculture in Arab countries."
+          },
+          "hq": {
+            "ar": "بيروت",
+            "en": "Beirut"
+          }
+        },
+        {
+          "name": {
+            "ar": "اتحاد المصارف العربية",
+            "en": "Union of Arab Banks"
+          },
+          "est": "1974",
+          "desc": {
+            "ar": "الإطار الجامع للمجتمع المصرفي والمالي العربي، تأسس بقرار من جامعة الدول العربية.",
+            "en": "The umbrella organization of the Arab banking and financial community, established by an Arab League resolution."
+          },
+          "hq": {
+            "ar": "بيروت",
+            "en": "Beirut"
+          }
+        },
+        {
+          "name": {
+            "ar": "الإتحاد العام العربي للتأمين",
+            "en": "General Arab Insurance Federation (GAIF)"
+          },
+          "est": "1953",
+          "desc": {
+            "ar": "يجمع شركات وأسواق التأمين العربية.",
+            "en": "Brings together Arab insurance companies and markets."
+          },
+          "hq": {
+            "ar": "القاهرة",
+            "en": "Cairo"
+          }
+        },
+        {
+          "name": {
+            "ar": "اتحاد المقاولين العرب",
+            "en": "Arab Contractors Federation"
+          },
+          "est": "—",
+          "desc": {
+            "ar": "يمثل شركات المقاولات العربية ويعزز تكامل قطاع الإنشاءات.",
+            "en": "Represents Arab contractors and promotes integration of the construction sector."
+          },
+          "hq": {
+            "ar": "القاهرة",
+            "en": "Cairo"
+          }
+        },
+        {
+          "name": {
+            "ar": "الاتحاد العربي للحديد والصلب",
+            "en": "Arab Iron & Steel Union (AISU)"
+          },
+          "est": "1972",
+          "desc": {
+            "ar": "أول منظمة عربية متخصصة في مجال الحديد والصلب تابعة لمجلس الوحدة الاقتصادية.",
+            "en": "The first specialized Arab organization in iron and steel under the Council of Arab Economic Unity."
+          },
+          "hq": {
+            "ar": "عمّان",
+            "en": "Amman"
+          }
+        },
+        {
+          "name": {
+            "ar": "الاتحاد العربي لمنتجي الأسمدة",
+            "en": "Arab Fertilizer Association (AFA)"
+          },
+          "est": "1975",
+          "desc": {
+            "ar": "يجمع منتجي الأسمدة العرب ويدعم تطوير الصناعة.",
+            "en": "Brings together Arab fertilizer producers and supports the industry's development."
+          },
+          "hq": {
+            "ar": "القاهرة",
+            "en": "Cairo"
+          }
+        },
+        {
+          "name": {
+            "ar": "الاتحاد العربي للأسمنت ومواد البناء",
+            "en": "Arab Union for Cement & Building Materials (AUCBM)"
+          },
+          "est": "1977",
+          "desc": {
+            "ar": "يخدم صناعة الأسمنت ومواد البناء في الدول العربية.",
+            "en": "Serves the cement and building-materials industry in Arab countries."
+          },
+          "hq": {
+            "ar": "دمشق",
+            "en": "Damascus"
+          }
+        },
+        {
+          "name": {
+            "ar": "الاتحاد العربي لمنتجي البتروكيماويات والكيماويات",
+            "en": "Arab Union of Petrochemical & Chemical Producers"
+          },
+          "est": "1994",
+          "desc": {
+            "ar": "يجمع منتجي البتروكيماويات والكيماويات العرب.",
+            "en": "Brings together Arab petrochemical and chemical producers."
+          },
+          "hq": {
+            "ar": "الكويت",
+            "en": "Kuwait"
+          }
+        },
+        {
+          "name": {
+            "ar": "الاتحاد العربي للصناعات الغذائية",
+            "en": "Arab Union for Food Industries"
+          },
+          "est": "1995",
+          "desc": {
+            "ar": "يدعم تكامل صناعة الأغذية العربية وسلاسل إمدادها.",
+            "en": "Supports the integration of the Arab food industry and its supply chains."
+          },
+          "hq": {
+            "ar": "—",
+            "en": "—"
+          }
+        },
+        {
+          "name": {
+            "ar": "الاتحاد العربي لمنتجي وناقلي وموزعي الكهرباء",
+            "en": "Arab Union of Electricity (AUPTDE)"
+          },
+          "est": "1987",
+          "desc": {
+            "ar": "ينسق العمل بين مؤسسات الكهرباء العربية للإنتاج والنقل والتوزيع.",
+            "en": "Coordinates Arab electricity producers, transmitters and distributors."
+          },
+          "hq": {
+            "ar": "عمّان",
+            "en": "Amman"
+          }
+        }
+      ]
+    },
+    {
+      "name": {
+        "ar": "اتحادات النقل والاتصال",
+        "en": "Transport & communications unions"
+      },
+      "items": [
+        {
+          "name": {
+            "ar": "الاتحاد العربي للنقل الجوي",
+            "en": "Arab Air Carriers' Organization (AACO)"
+          },
+          "est": "1965",
+          "desc": {
+            "ar": "يجمع الناقلات الجوية العربية.",
+            "en": "Brings together Arab air carriers."
+          },
+          "hq": {
+            "ar": "بيروت",
+            "en": "Beirut"
+          }
+        },
+        {
+          "name": {
+            "ar": "الاتحاد العربي للسكك الحديدية",
+            "en": "Arab Union of Railways"
+          },
+          "est": "1979",
+          "desc": {
+            "ar": "يعزز تكامل شبكات السكك الحديدية العربية.",
+            "en": "Promotes integration of Arab railway networks."
+          },
+          "hq": {
+            "ar": "حلب",
+            "en": "Aleppo"
+          }
+        },
+        {
+          "name": {
+            "ar": "الاتحاد العربي للنقل البري",
+            "en": "Arab Union of Land Transport"
+          },
+          "est": "—",
+          "desc": {
+            "ar": "يدعم قطاع النقل البري العربي وتسهيل حركة التجارة.",
+            "en": "Supports the Arab land-transport sector and facilitates trade flows."
+          },
+          "hq": {
+            "ar": "عمّان",
+            "en": "Amman"
+          }
+        },
+        {
+          "name": {
+            "ar": "اتحاد إذاعات الدول العربية",
+            "en": "Arab States Broadcasting Union (ASBU)"
+          },
+          "est": "1969",
+          "desc": {
+            "ar": "يجمع الهيئات الإذاعية والتلفزيونية العربية.",
+            "en": "Brings together Arab radio and television corporations."
+          },
+          "hq": {
+            "ar": "تونس",
+            "en": "Tunis"
+          }
+        },
+        {
+          "name": {
+            "ar": "اتحاد وكالات الأنباء العربية",
+            "en": "Federation of Arab News Agencies (FANA)"
+          },
+          "est": "1975",
+          "desc": {
+            "ar": "ينسق التعاون بين وكالات الأنباء العربية.",
+            "en": "Coordinates cooperation among Arab news agencies."
+          },
+          "hq": {
+            "ar": "—",
+            "en": "—"
+          }
+        }
+      ]
+    },
+    {
+      "name": {
+        "ar": "اتحادات مهنية ومجتمعية",
+        "en": "Professional & social unions"
+      },
+      "items": [
+        {
+          "name": {
+            "ar": "اتحاد المحامين العرب",
+            "en": "Arab Lawyers Union"
+          },
+          "est": "1958",
+          "desc": {
+            "ar": "أقدم اتحاد مهني عربي، يجمع نقابات وهيئات المحامين.",
+            "en": "The oldest Arab professional union, gathering bar associations and lawyers' bodies."
+          },
+          "hq": {
+            "ar": "القاهرة",
+            "en": "Cairo"
+          }
+        },
+        {
+          "name": {
+            "ar": "اتحاد الصحفيين العرب",
+            "en": "Federation of Arab Journalists"
+          },
+          "est": "1964",
+          "desc": {
+            "ar": "يمثل نقابات الصحفيين في الدول العربية.",
+            "en": "Represents journalists' syndicates in Arab countries."
+          },
+          "hq": {
+            "ar": "القاهرة",
+            "en": "Cairo"
+          }
+        },
+        {
+          "name": {
+            "ar": "اتحاد الجامعات العربية",
+            "en": "Association of Arab Universities"
+          },
+          "est": "1964",
+          "desc": {
+            "ar": "يجمع مئات الجامعات العربية ويدعم التعليم العالي والبحث.",
+            "en": "Brings together hundreds of Arab universities and supports higher education and research."
+          },
+          "hq": {
+            "ar": "عمّان",
+            "en": "Amman"
+          }
+        },
+        {
+          "name": {
+            "ar": "الاتحاد العام للفلاحين والتعاونيين الزراعيين العرب",
+            "en": "General Union of Arab Peasants & Agricultural Cooperatives"
+          },
+          "est": "—",
+          "desc": {
+            "ar": "يمثل الفلاحين والجمعيات التعاونية الزراعية العربية.",
+            "en": "Represents Arab peasants and agricultural cooperatives."
+          },
+          "hq": {
+            "ar": "—",
+            "en": "—"
+          }
+        },
+        {
+          "name": {
+            "ar": "الاتحاد العربي للمعارض والمؤتمرات الدولية",
+            "en": "Arab Union for International Exhibitions & Conferences (AUIEC)"
+          },
+          "est": "1995",
+          "desc": {
+            "ar": "يخدم صناعة المعارض والمؤتمرات العربية تحت رعاية الجامعة العربية.",
+            "en": "Serves the Arab exhibitions and conferences industry under Arab League auspices."
+          },
+          "hq": {
+            "ar": "القاهرة",
+            "en": "Cairo"
+          }
+        },
+        {
+          "name": {
+            "ar": "الاتحاد العربي للطاقة والمعادن",
+            "en": "Arab Union for Energy & Minerals (AUEM)"
+          },
+          "est": "2026",
+          "desc": {
+            "ar": "أحدث الاتحادات العربية النوعية — يجمع فاعلي قطاعي الطاقة والمعادن في الدول العربية.",
+            "en": "The newest specialized Arab union — uniting energy and minerals stakeholders across Arab countries."
+          },
+          "hq": {
+            "ar": "الدار البيضاء",
+            "en": "Casablanca"
+          }
+        }
+      ]
+    }
+  ],
+  "orgs_title": {
+    "ar": "منظمات عربية متخصصة تابعة للجامعة العربية",
+    "en": "Specialized organizations of the Arab League"
+  },
+  "orgs_sub": {
+    "ar": "إلى جانب الاتحادات المهنية، تضم منظومة جامعة الدول العربية منظمات متخصصة تعمل في مجالات قطاعية:",
+    "en": "Alongside the professional federations, the Arab League system includes specialized sectoral organizations:"
+  },
+  "orgs": [
+    {
+      "name": {
+        "ar": "المنظمة العربية للتربية والثقافة والعلوم (ألكسو)",
+        "en": "Arab League Educational, Cultural & Scientific Organization (ALECSO)"
+      },
+      "est": "1970",
+      "hq": {
+        "ar": "تونس",
+        "en": "Tunis"
+      }
+    },
+    {
+      "name": {
+        "ar": "المنظمة العربية للتنمية الزراعية",
+        "en": "Arab Organization for Agricultural Development"
+      },
+      "est": "1970",
+      "hq": {
+        "ar": "الخرطوم",
+        "en": "Khartoum"
+      }
+    },
+    {
+      "name": {
+        "ar": "المنظمة العربية للتنمية الصناعية والتقييس والتعدين",
+        "en": "Arab Industrial Development, Standardization & Mining Organization (AIDSMO)"
+      },
+      "est": "1968",
+      "hq": {
+        "ar": "الرباط",
+        "en": "Rabat"
+      }
+    },
+    {
+      "name": {
+        "ar": "المنظمة العربية للعمل",
+        "en": "Arab Labour Organization"
+      },
+      "est": "1965",
+      "hq": {
+        "ar": "القاهرة",
+        "en": "Cairo"
+      }
+    },
+    {
+      "name": {
+        "ar": "صندوق النقد العربي",
+        "en": "Arab Monetary Fund"
+      },
+      "est": "1976",
+      "hq": {
+        "ar": "أبوظبي",
+        "en": "Abu Dhabi"
+      }
+    },
+    {
+      "name": {
+        "ar": "منظمة الأقطار العربية المصدرة للبترول (أوابك)",
+        "en": "Organization of Arab Petroleum Exporting Countries (OAPEC)"
+      },
+      "est": "1968",
+      "hq": {
+        "ar": "الكويت",
+        "en": "Kuwait"
+      }
+    },
+    {
+      "name": {
+        "ar": "الوكالة العربية للطاقة الذرية",
+        "en": "Arab Atomic Energy Agency"
+      },
+      "est": "1989",
+      "hq": {
+        "ar": "تونس",
+        "en": "Tunis"
+      }
+    },
+    {
+      "name": {
+        "ar": "المنظمة العربية للطيران المدني",
+        "en": "Arab Civil Aviation Organization"
+      },
+      "est": "1989",
+      "hq": {
+        "ar": "الرباط",
+        "en": "Rabat"
+      }
+    },
+    {
+      "name": {
+        "ar": "الأكاديمية العربية للعلوم والتكنولوجيا والنقل البحري",
+        "en": "Arab Academy for Science, Technology & Maritime Transport"
+      },
+      "est": "1970",
+      "hq": {
+        "ar": "الإسكندرية",
+        "en": "Alexandria"
+      }
+    }
+  ],
+  "note": {
+    "ar": "يسعى الاتحاد العربي للطاقة والمعادن إلى بناء شراكات عمل مع هذه المنظومة، وفي مقدمتها جامعة الدول العربية والمنظمة العربية للتنمية الصناعية والتقييس والتعدين.",
+    "en": "The Arab Union for Energy & Minerals seeks to build working partnerships across this ecosystem — foremost with the League of Arab States and AIDSMO."
+  }
+}

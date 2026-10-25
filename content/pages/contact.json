@@ -1,0 +1,76 @@
+{
+  "title": {
+    "ar": "اتصل بنا",
+    "en": "Contact Us"
+  },
+  "meta": {
+    "ar": "تواصل مع الأمانة العامة للاتحاد العربي للطاقة والمعادن — الدار البيضاء، المغرب.",
+    "en": "Contact the General Secretariat of the Arab Union for Energy & Minerals — Casablanca, Morocco."
+  },
+  "intro": {
+    "ar": "يسعدنا تواصلكم معنا للاستفسار عن العضوية أو الشراكات أو أي معلومات حول أنشطة الاتحاد.",
+    "en": "We welcome your inquiries about membership, partnerships, or any information about the Union's activities."
+  },
+  "hq_title": {
+    "ar": "المقر الرئيسي",
+    "en": "Headquarters"
+  },
+  "hq_value": {
+    "ar": "الدار البيضاء، المملكة المغربية",
+    "en": "Casablanca, Kingdom of Morocco"
+  },
+  "topics_title": {
+    "ar": "يمكنك الاستفسار عن",
+    "en": "You can ask about"
+  },
+  "topics": [
+    {
+      "ar": "العضوية ومتطلبات الانضمام",
+      "en": "Membership and admission requirements"
+    },
+    {
+      "ar": "الشراكات المؤسسية والاستثمارية",
+      "en": "Institutional and investment partnerships"
+    },
+    {
+      "ar": "اللجان المتخصصة وسبل المشاركة",
+      "en": "Specialized commissions and how to participate"
+    },
+    {
+      "ar": "الفعاليات والمؤتمرات القادمة",
+      "en": "Upcoming events and conferences"
+    },
+    {
+      "ar": "الاستفسارات الإعلامية والصحفية",
+      "en": "Media and press inquiries"
+    }
+  ],
+  "form_name": {
+    "ar": "الاسم",
+    "en": "Name"
+  },
+  "form_org": {
+    "ar": "الجهة / الشركة",
+    "en": "Organization / Company"
+  },
+  "form_email": {
+    "ar": "البريد الإلكتروني",
+    "en": "Email"
+  },
+  "form_subject": {
+    "ar": "الموضوع",
+    "en": "Subject"
+  },
+  "form_message": {
+    "ar": "الرسالة",
+    "en": "Message"
+  },
+  "form_send": {
+    "ar": "إرسال",
+    "en": "Send"
+  },
+  "form_note": {
+    "ar": "سيتم تحويل رسالتك عبر البريد الإلكتروني إلى الأمانة العامة للاتحاد.",
+    "en": "Your message will be forwarded by email to the Union's General Secretariat."
+  }
+}

@@ -1,0 +1,108 @@
+{
+  "title": {
+    "ar": "عن الاتحاد",
+    "en": "About the Union"
+  },
+  "meta": {
+    "ar": "تعرف على نشأة الاتحاد العربي للطاقة والمعادن ورؤيته ورسالته وقصة تأسيسه في المغرب.",
+    "en": "Learn about the establishment, vision and mission of the Arab Union for Energy & Minerals."
+  },
+  "intro_title": {
+    "ar": "نشأة الاتحاد",
+    "en": "Establishment"
+  },
+  "intro": {
+    "ar": "انعقدت يوم الخميس 23 يوليو 2026 بمدينة سلا بالمملكة المغربية الجمعية العمومية التأسيسية للاتحاد العربي للطاقة والمعادن، مما مثّل الإطلاق الرسمي لهذه المنصة المؤسسية الجديدة التي تهدف إلى دفع دينامية جديدة للعمل العربي المشترك في هذين القطاعين الاستراتيجيين.\n\nوقد جمع اللقاء التأسيسي صنّاع قرار ومسؤولين وخبراء وفاعلين اقتصاديين يمثلون القطاع الخاص من عدة دول عربية، وانتُخب المغرب بالإجماع لرئاسة هذه المنظمة الجديدة التي يقع مقرها في الدار البيضاء.\n\nوجاء تأسيس الاتحاد بمبادرة من شركة «يونايتد بتروليوم» بصفتها العضو المؤسس والشريك الاستراتيجي، وهو ثمرة مشاورات ولقاءات عديدة بين الشركاء العرب توّجت بالتوافق على اختيار المغرب لاحتضان المنظمة. وخلال الجمعية تم الكشف عن اللجنة التأسيسية والبرنامج السنوي وخارطة الطريق للفترة 2026–2030.",
+    "en": "The inaugural General Assembly of the Arab Union for Energy & Minerals was held on Thursday, 23 July 2026, in Salé, Kingdom of Morocco — the official launch of a new institutional platform aimed at driving joint Arab action in these two strategic sectors.\n\nThe founding meeting brought together decision-makers, officials, experts and economic actors representing the private sector of several Arab countries. Morocco was unanimously elected to the presidency of the new organization, whose headquarters is located in Casablanca.\n\nThe Union was established on the initiative of United Petroleum as founding member and strategic partner, and is the fruit of extensive consultations among Arab partners that concluded with a consensus on Morocco as host. The Assembly unveiled the founding committee, the annual programme, and the 2026–2030 roadmap."
+  },
+  "vision_title": {
+    "ar": "الرؤية",
+    "en": "Vision"
+  },
+  "vision": {
+    "ar": "أن يصبح الاتحاد المنصة العربية المرجعية الرئيسية التي تجعل من الطاقة والمعادن روافع للتنمية المستدامة والتكامل الاقتصادي الإقليمي.",
+    "en": "To become the leading pan-Arab reference platform making energy and minerals levers of sustainable development and regional economic integration."
+  },
+  "mission_title": {
+    "ar": "الرسالة",
+    "en": "Mission"
+  },
+  "mission": {
+    "ar": "تعزيز موقع الدول العربية في الساحة الدولية في قطاعي الصناعات الطاقية والتعدينية، من خلال تطوير شراكات استراتيجية بين الحكومات والمؤسسات والشركات والمستثمرين ومراكز البحث والجامعات.",
+    "en": "Strengthening the position of Arab countries on the international stage in the energy and mining industries by developing strategic partnerships among governments, institutions, companies, investors, research centers and universities."
+  },
+  "context_title": {
+    "ar": "السياق الاستراتيجي",
+    "en": "Strategic context"
+  },
+  "context": {
+    "ar": "يأتي إنشاء الاتحاد في سياق عالمي يتسم بتحولات استراتيجية كبرى، حيث أصبحت الطاقة والموارد المعدنية تحتل مكانة مركزية في رهانات الأمن الاقتصادي والسيادة الصناعية والانتقال الطاقي. وفي ظل تقلبات الأسواق العالمية، لا سيما أسعار النفط، يشكّل إنشاء هذا التجمع المهني أمراً بالغ الأهمية لتوحيد الرؤى وتنسيق خطط العمل العربية.",
+    "en": "The Union's creation comes in a global context marked by major strategic shifts, in which energy and mineral resources now occupy a central place in economic security, industrial sovereignty and energy transition. Amid the volatility of global markets — particularly oil prices — establishing this professional grouping is of paramount importance to unify visions and coordinate Arab action plans."
+  },
+  "pillars_title": {
+    "ar": "الركائز التأسيسية",
+    "en": "Founding pillars"
+  },
+  "pillars": [
+    {
+      "ar": "دمج التكنولوجيات الجديدة في قطاعي الطاقة والمعادن",
+      "en": "Integrating new technologies into the energy and minerals sectors"
+    },
+    {
+      "ar": "تعزيز البحث العلمي والطاقات النظيفة",
+      "en": "Promoting scientific research and clean energy"
+    },
+    {
+      "ar": "خفض الانبعاثات تماشياً مع أهداف التنمية المستدامة",
+      "en": "Reducing emissions in line with the Sustainable Development Goals"
+    },
+    {
+      "ar": "توحيد الجهود العربية لرفع التحديات العالمية المتسارعة",
+      "en": "Unifying Arab efforts to meet accelerating global challenges"
+    }
+  ],
+  "president_title": {
+    "ar": "كلمة الرئيس",
+    "en": "From the President"
+  },
+  "president_name": {
+    "ar": "صلاح الدين البدري",
+    "en": "Salah Eddine El Badry"
+  },
+  "president_role": {
+    "ar": "رئيس الاتحاد العربي للطاقة والمعادن",
+    "en": "President of the Arab Union for Energy & Minerals"
+  },
+  "president_quote": {
+    "ar": "«إنشاء هذا التجمع المهني أمر بالغ الأهمية من أجل توحيد الرؤى وتنسيق خطط العمل، وهو ثمرة مشاورات ولقاءات عديدة توّجت بالتوافق على اختيار المغرب لاحتضان هذه المنظمة العربية الهامة.»",
+    "en": "“Establishing this professional grouping is of paramount importance for unifying visions and coordinating action plans. It is the fruit of extensive consultations that concluded with a consensus on Morocco as host of this important Arab organization.”"
+  },
+  "president_photo": "",
+  "timeline_title": {
+    "ar": "محطات رئيسية",
+    "en": "Key milestones"
+  },
+  "timeline": [
+    {
+      "date": "2026-07-23",
+      "text": {
+        "ar": "انعقاد الجمعية العمومية التأسيسية في سلا وانتخاب المغرب رئيساً للاتحاد",
+        "en": "Inaugural General Assembly in Salé; Morocco unanimously elected to the presidency"
+      }
+    },
+    {
+      "date": "2026-07-23",
+      "text": {
+        "ar": "ندوة صحفية للجنة التأسيسية: الإعلان عن اللجنة التأسيسية والبرنامج السنوي وخارطة الطريق 2026–2030",
+        "en": "Founding committee press conference: founding committee, annual programme and 2026–2030 roadmap unveiled"
+      }
+    },
+    {
+      "date": "2026",
+      "text": {
+        "ar": "انطلاق الأعمال التحضيرية لاستكمال الأجهزة واللجان المتخصصة وتفعيل الشراكات",
+        "en": "Preparatory work begins to complete governance bodies, specialized commissions and partnerships"
+      }
+    }
+  ]
+}

@@ -1751,3 +1751,379 @@ blockquote {
     font-size: 0.92rem;
   }
 }
+
+/* ============================================================
+   CMS-driven components
+   Announcement bar, news/event media, events list, gallery grid
+   and lightbox. All of it is fed by content/*.json.
+   ============================================================ */
+
+/* Keep the eleven navigation items on one line on smaller laptops. */
+@media (min-width: 1121px) and (max-width: 1400px) {
+  .main-nav { gap: 0.1rem; }
+  .nav-link { font-size: 0.8rem; padding: 0.42rem 0.55rem; }
+  .lang-switch { font-size: 0.8rem; padding: 0.4rem 0.8rem; }
+}
+
+/* <picture> wrappers must not take part in layout. */
+.brand picture,
+.hero-emblem picture,
+.footer-brand picture { display: contents; }
+
+/* ---------- Announcement bar ---------- */
+.announce-bar {
+  position: relative;
+  z-index: 40;
+  background: linear-gradient(90deg, oklch(0.30 0.075 164 / 0.96), oklch(0.22 0.058 168 / 0.96));
+  border-bottom: 1px solid var(--border-card);
+  box-shadow: inset 0 -1px 0 oklch(0.82 0.14 90 / 0.18);
+}
+
+.announce-bar[hidden] { display: none; }
+
+.announce-inner {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding-block: 0.6rem;
+  min-height: 46px;
+}
+
+.announce-track { flex: 1 1 auto; min-width: 0; }
+
+.announce-msg {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.25rem 0.75rem;
+  font-size: 0.9rem;
+  line-height: 1.55;
+  color: var(--ivory-100);
+  text-align: center;
+}
+
+.announce-msg.is-active { display: flex; animation: announce-in 0.45s var(--ease-lux); }
+
+@keyframes announce-in {
+  from { opacity: 0; transform: translateY(-4px); }
+  to { opacity: 1; transform: none; }
+}
+
+.announce-msg.important .announce-text { font-weight: 700; color: var(--gold-300); }
+
+.announce-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.18rem 0.7rem;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--gold-500);
+  color: var(--gold-300);
+  font-weight: 700;
+  font-size: 0.82rem;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: all 0.25s var(--ease-lux);
+}
+
+.announce-link:hover {
+  background: linear-gradient(135deg, var(--gold-400), var(--gold-600));
+  color: var(--emerald-950);
+}
+
+.announce-close {
+  flex: 0 0 auto;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 1px solid var(--border-card);
+  background: transparent;
+  color: var(--ivory-300);
+  font-size: 1.05rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: all 0.25s var(--ease-lux);
+}
+
+.announce-close:hover {
+  color: var(--emerald-950);
+  background: var(--gold-400);
+  border-color: var(--gold-400);
+}
+
+/* ---------- News / event cards with an image ---------- */
+.card-media {
+  display: block;
+  overflow: hidden;
+  background: var(--emerald-900);
+}
+
+.card-media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 170px;
+  object-fit: cover;
+  transition: transform 0.6s var(--ease-lux);
+}
+
+.news-card.has-media:hover .card-media img,
+.event-card.has-media:hover .card-media img { transform: scale(1.05); }
+
+.card-main { display: block; }
+
+.news-card.has-media,
+.event-card.has-media {
+  padding: 0;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  align-items: stretch;
+}
+
+.news-card.has-media .card-main,
+.event-card.has-media .card-main { padding: 1.5rem 1.6rem; }
+
+/* ---------- Events ---------- */
+.events-grid { align-items: start; }
+
+.event-card .card-main { display: flow-root; }
+
+.event-date {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 76px;
+  padding: 0.5rem 0.4rem;
+  margin-bottom: 0.85rem;
+  border-radius: var(--radius-md);
+  background: linear-gradient(150deg, var(--gold-300), var(--gold-600));
+  color: var(--emerald-950);
+  line-height: 1.1;
+  box-shadow: 0 6px 18px oklch(0.82 0.15 90 / 0.22);
+}
+
+.event-day { font-size: 1.45rem; font-weight: 800; }
+.event-month { font-size: 0.76rem; font-weight: 700; letter-spacing: 0.04em; }
+.event-year { font-size: 0.68rem; font-weight: 700; opacity: 0.75; }
+
+[dir="rtl"] .event-month { letter-spacing: 0; }
+
+.event-meta {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+  margin: 0.3rem 0 0.7rem;
+}
+
+.event-meta svg { width: 15px; height: 15px; color: var(--gold-400); flex-shrink: 0; }
+.event-card .btn { margin-top: 1rem; }
+
+.event-row {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 1.25rem;
+  align-items: baseline;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--border-card);
+}
+
+.event-row:last-child { border-bottom: 0; }
+.event-row time { color: var(--gold-300); font-weight: 700; font-size: 0.9rem; }
+.event-row h3 { font-size: 1.05rem; line-height: 1.5; }
+.event-row p { display: flex; align-items: center; gap: 0.3rem; margin-top: 0.15rem; }
+.event-row svg { width: 14px; height: 14px; color: var(--gold-400); }
+
+/* ---------- Announcements listed on the news page ---------- */
+.notice-card { border-inline-start: 3px solid var(--gold-500); }
+.notice-card.important { border-inline-start-color: var(--gold-300); }
+.notice-card time {
+  display: inline-block;
+  color: var(--gold-300);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  margin-bottom: 0.35rem;
+}
+[dir="rtl"] .notice-card time { letter-spacing: 0; }
+.notice-card .link-more { margin-top: 0.4rem; }
+
+/* ---------- Gallery ---------- */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1rem;
+}
+
+.gallery-item {
+  position: relative;
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  padding: 0;
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background: var(--emerald-900);
+  cursor: zoom-in;
+  transition: border-color 0.3s var(--ease-lux), box-shadow 0.3s var(--ease-lux);
+}
+
+.gallery-item:hover,
+.gallery-item:focus-visible {
+  border-color: var(--border-card-hover);
+  box-shadow: var(--shadow-hover);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.65s var(--ease-lux);
+}
+
+.gallery-item:hover img { transform: scale(1.06); }
+
+.gallery-cap {
+  position: absolute;
+  inset-inline: 0;
+  bottom: 0;
+  padding: 2.4rem 0.9rem 0.7rem;
+  font-size: 0.83rem;
+  line-height: 1.5;
+  color: var(--ivory-100);
+  text-align: start;
+  background: linear-gradient(to top, oklch(0.14 0.04 168 / 0.94), transparent);
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 0.35s var(--ease-lux), transform 0.35s var(--ease-lux);
+}
+
+.gallery-item:hover .gallery-cap,
+.gallery-item:focus-visible .gallery-cap { opacity: 1; transform: none; }
+
+@media (hover: none) {
+  .gallery-cap { opacity: 1; transform: none; }
+}
+
+/* ---------- Lightbox ---------- */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(1rem, 4vw, 3rem);
+  background: oklch(0.10 0.03 170 / 0.94);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.lightbox.open { display: flex; }
+
+.lightbox-figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.85rem;
+  max-width: min(1100px, 92vw);
+}
+
+.lightbox-figure img {
+  max-width: 100%;
+  max-height: 76vh;
+  width: auto;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-luminous);
+  object-fit: contain;
+}
+
+.lightbox-cap { color: var(--ivory-200); font-size: 0.92rem; text-align: center; line-height: 1.6; }
+.lightbox-count { color: var(--ivory-400); font-size: 0.78rem; }
+
+.lightbox-close,
+.lightbox-nav {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid var(--border-card);
+  background: oklch(0.22 0.05 167 / 0.9);
+  color: var(--ivory-100);
+  font-size: 1.35rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: all 0.25s var(--ease-lux);
+}
+
+.lightbox-close:hover,
+.lightbox-nav:hover {
+  background: var(--gold-400);
+  color: var(--emerald-950);
+  border-color: var(--gold-400);
+}
+
+.lightbox-close { top: 1.1rem; inset-inline-end: 1.2rem; }
+.lightbox-nav { top: 50%; transform: translateY(-50%); }
+.lightbox-nav.prev { inset-inline-start: 1rem; }
+.lightbox-nav.next { inset-inline-end: 1rem; }
+
+/* ---------- Empty collection state ---------- */
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.7rem;
+  padding: 2.8rem 1.5rem;
+  border: 1px dashed var(--border-card);
+  border-radius: var(--radius-md);
+  color: var(--ivory-300);
+  text-align: center;
+  line-height: 1.7;
+}
+
+.empty-state svg { width: 34px; height: 34px; color: var(--gold-500); opacity: 0.85; }
+.empty-state span { max-width: 46ch; }
+
+/* ---------- Optional portrait (president card) ---------- */
+.avatar-img {
+  width: 84px;
+  height: 84px;
+  flex: 0 0 84px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--gold-400);
+  box-shadow: 0 6px 20px var(--gold-glow);
+}
+
+@media (max-width: 768px) {
+  .news-card.has-media,
+  .event-card.has-media { grid-template-columns: 1fr; }
+
+  .news-card.has-media .card-main,
+  .event-card.has-media .card-main { padding: 1.25rem 1.15rem; }
+
+  .card-media img { min-height: 190px; max-height: 260px; }
+
+  .event-row { grid-template-columns: 1fr; gap: 0.2rem; padding: 0.9rem 0; }
+  .event-row time { font-size: 0.84rem; }
+
+  .gallery-grid { grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 0.7rem; }
+  .gallery-cap { font-size: 0.76rem; padding: 1.8rem 0.6rem 0.55rem; }
+
+  .announce-inner { padding-block: 0.55rem; min-height: 42px; gap: 0.6rem; }
+  .announce-msg { font-size: 0.85rem; justify-content: flex-start; text-align: start; }
+  .lightbox-nav { width: 38px; height: 38px; font-size: 1.15rem; }
+  .lightbox-nav.prev { inset-inline-start: 0.4rem; }
+  .lightbox-nav.next { inset-inline-end: 0.4rem; }
+  .empty-state { padding: 2.1rem 1.1rem; font-size: 0.92rem; }
+  .avatar-img { width: 72px; height: 72px; flex-basis: 72px; margin-inline: auto; }
+}

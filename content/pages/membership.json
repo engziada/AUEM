@@ -1,0 +1,60 @@
+{
+  "title": {
+    "ar": "العضوية",
+    "en": "Membership"
+  },
+  "meta": {
+    "ar": "عضوية الاتحاد العربي للطاقة والمعادن مفتوحة للفاعلين الاقتصاديين والمؤسسات والشركات والخبراء في قطاعي الطاقة والمعادن بالدول العربية.",
+    "en": "Membership of the Arab Union for Energy & Minerals is open to economic actors, institutions, companies and experts in the energy and minerals sectors across Arab countries."
+  },
+  "intro_title": {
+    "ar": "من يمكنه الانضمام؟",
+    "en": "Who can join?"
+  },
+  "intro": {
+    "ar": "يضم الاتحاد فاعلين اقتصاديين يمثلون القطاع الخاص في الدول العربية بقطاعي الطاقة والمعادن: شركات الطاقة والنفط والغاز والتعدين، والمؤسسات، والمستثمرين، ومراكز البحث، والجامعات، والخبراء والمختصين.",
+    "en": "The Union brings together economic actors representing the private sector of Arab countries in the energy and minerals sectors: energy, oil, gas and mining companies, institutions, investors, research centers, universities, experts and specialists."
+  },
+  "benefits_title": {
+    "ar": "لماذا الانضمام؟",
+    "en": "Why join?"
+  },
+  "benefits": [
+    {
+      "ar": "الانخراط في شبكة تعاون عربية تجمع الحكومات والمؤسسات والشركات العاملة في القطاعين.",
+      "en": "Join an Arab cooperation network bringing together governments, institutions and companies in both sectors."
+    },
+    {
+      "ar": "الوصول إلى فرص الاستثمار والشراكات الاستراتيجية التي يوفرها الاتحاد.",
+      "en": "Access investment opportunities and strategic partnerships facilitated by the Union."
+    },
+    {
+      "ar": "المساهمة في صياغة الرؤى وخطط العمل العربية المشتركة في الطاقة والمعادن.",
+      "en": "Contribute to shaping common Arab visions and action plans for energy and minerals."
+    },
+    {
+      "ar": "المشاركة في اللجان المتخصصة والفعاليات والبرامج التدريبية والبحثية.",
+      "en": "Take part in specialized commissions, events, and training and research programmes."
+    },
+    {
+      "ar": "تعزيز الحضور الدولي عبر منصة تمثّل الصناعات الطاقية والتعدينية العربية.",
+      "en": "Strengthen international presence through a platform representing Arab energy and mining industries."
+    }
+  ],
+  "how_title": {
+    "ar": "كيفية الانضمام",
+    "en": "How to join"
+  },
+  "how": {
+    "ar": "للراغبين في الانضمام إلى الاتحاد، يرجى التواصل مع الأمانة العامة عبر صفحة «اتصل بنا» مع ذكر اسم الجهة ومجال عملها والدولة. وسيقوم فريق الاتحاد بمشاركة وثائق وشروط العضوية فور اعتمادها رسمياً ضمن خارطة الطريق 2026–2030.",
+    "en": "To join the Union, please contact the General Secretariat via the Contact page, indicating your organisation's name, field of activity and country. The Union's team will share membership documentation and criteria once officially adopted under the 2026–2030 roadmap."
+  },
+  "note": {
+    "ar": "ملاحظة: إطار العضوية ورسومها يجري استكمالها من قبل الأجهزة المختصة في الاتحاد وفق خارطة الطريق المعتمدة.",
+    "en": "Note: the membership framework and fees are being finalized by the Union's competent bodies under the adopted roadmap."
+  },
+  "cta": {
+    "ar": "تواصل معنا للعضوية",
+    "en": "Contact us about membership"
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "title": {
+    "ar": "الأهداف الاستراتيجية",
+    "en": "Strategic Objectives"
+  },
+  "meta": {
+    "ar": "الأهداف الاستراتيجية للاتحاد العربي للطاقة والمعادن: التكامل العربي، الاستثمار، الأمن الطاقي، الانتقال الطاقي، تطوير التعدين.",
+    "en": "The strategic objectives of the Arab Union for Energy & Minerals: Arab integration, investment, energy security, energy transition and mining development."
+  },
+  "intro": {
+    "ar": "حدّدت الجمعية العمومية التأسيسية للاتحاد مجموعة من الأهداف الاستراتيجية التي تؤطر عمله في خدمة التكامل الاقتصادي العربي في قطاعي الطاقة والمعادن:",
+    "en": "The Union's inaugural General Assembly defined a set of strategic objectives that frame its work in service of Arab economic integration in the energy and minerals sectors:"
+  },
+  "items": [
+    {
+      "ar": "تعزيز التكامل العربي من خلال تطوير شبكة تعاون بين الحكومات والمؤسسات والشركات العاملة في قطاعي الطاقة والمعادن.",
+      "en": "Strengthen Arab integration by developing a cooperation network among governments, institutions and companies operating in the energy and minerals sectors."
+    },
+    {
+      "ar": "تشجيع الاستثمارات العربية والدولية وتثمين الفرص الكامنة في دول المنطقة.",
+      "en": "Encourage Arab and international investment and valorize the region's inherent opportunities."
+    },
+    {
+      "ar": "المساهمة في تعزيز الأمن الطاقي العربي والتدبير المستدام للموارد الطبيعية.",
+      "en": "Contribute to strengthening Arab energy security and the sustainable management of natural resources."
+    },
+    {
+      "ar": "مواكبة الانتقال الطاقي عبر دعم مشاريع الطاقة المتجددة والهيدروجين الأخضر وكفاءة الطاقة.",
+      "en": "Accompany the energy transition by supporting renewable-energy, green-hydrogen and energy-efficiency projects."
+    },
+    {
+      "ar": "تشجيع تطوير قطاع تعديني يتماشى مع أفضل الممارسات الدولية.",
+      "en": "Promote the development of a mining sector aligned with international best practices."
+    },
+    {
+      "ar": "تحفيز البحث العلمي والابتكار ونقل التكنولوجيا ودمج التكنولوجيات الجديدة.",
+      "en": "Stimulate scientific research, innovation, technology transfer and the integration of new technologies."
+    },
+    {
+      "ar": "تعزيز الدبلوماسية الاقتصادية العربية وموقع الدول العربية في الصناعات الطاقية والتعدينية دولياً.",
+      "en": "Advance Arab economic diplomacy and the international standing of Arab countries in the energy and mining industries."
+    },
+    {
+      "ar": "خفض الانبعاثات ودعم الطاقات النظيفة تماشياً مع أهداف التنمية المستدامة.",
+      "en": "Reduce emissions and support clean energy in line with the Sustainable Development Goals."
+    }
+  ]
+}

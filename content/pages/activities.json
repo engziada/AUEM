@@ -1,0 +1,121 @@
+{
+  "title": {
+    "ar": "الأنشطة ومجالات العمل",
+    "en": "Activities & Workstreams"
+  },
+  "meta": {
+    "ar": "مجالات عمل الاتحاد العربي للطاقة والمعادن: التكامل العربي، الاستثمار، الانتقال الطاقي، تطوير التعدين، البحث والابتكار، الدبلوماسية الاقتصادية.",
+    "en": "Workstreams of the Arab Union for Energy & Minerals: Arab integration, investment, energy transition, mining development, research & innovation, economic diplomacy."
+  },
+  "intro": {
+    "ar": "يعمل الاتحاد على تحويل الموارد الطاقية والمعدنية الهامة في العالم العربي إلى مشاريع مهيكلة وشراكات استراتيجية وفرص استثمارية ملموسة، عبر مجالات عمل متكاملة:",
+    "en": "The Union works to transform the Arab world's significant energy and mineral resources into structured projects, strategic partnerships and concrete investment opportunities through integrated workstreams:"
+  },
+  "streams": [
+    {
+      "name": {
+        "ar": "التكامل والربط العربي",
+        "en": "Arab integration & networking"
+      },
+      "desc": {
+        "ar": "تطوير شبكة تعاون بين الحكومات والمؤسسات والشركات العاملة في قطاعي الطاقة والمعادن لتوحيد الرؤى وتنسيق خطط العمل.",
+        "en": "Developing a cooperation network among governments, institutions and companies in the energy and minerals sectors to unify visions and coordinate action plans."
+      }
+    },
+    {
+      "name": {
+        "ar": "تشجيع الاستثمار",
+        "en": "Investment promotion"
+      },
+      "desc": {
+        "ar": "تشجيع الاستثمارات العربية والدولية وتثمين الفرص الكامنة في دول المنطقة وتحويلها إلى مشاريع ملموسة.",
+        "en": "Encouraging Arab and international investment and valorizing the region's opportunities into concrete projects."
+      }
+    },
+    {
+      "name": {
+        "ar": "الانتقال الطاقي",
+        "en": "Energy transition"
+      },
+      "desc": {
+        "ar": "دعم مشاريع الطاقة المتجددة والهيدروجين الأخضر وكفاءة الطاقة والطاقات النظيفة وخفض الانبعاثات.",
+        "en": "Supporting renewable-energy, green-hydrogen, energy-efficiency and clean-energy projects and emissions reduction."
+      }
+    },
+    {
+      "name": {
+        "ar": "تطوير قطاع التعدين",
+        "en": "Mining sector development"
+      },
+      "desc": {
+        "ar": "العمل على تطوير قطاع تعديني عربي يتماشى مع أفضل الممارسات الدولية ويعزز التدبير المستدام للموارد.",
+        "en": "Developing an Arab mining sector aligned with international best practices and sustainable resource management."
+      }
+    },
+    {
+      "name": {
+        "ar": "البحث والابتكار ونقل التكنولوجيا",
+        "en": "Research, innovation & technology transfer"
+      },
+      "desc": {
+        "ar": "تحفيز البحث العلمي ودمج التكنولوجيات الجديدة ودعم الابتكار وريادة الأعمال في القطاعين.",
+        "en": "Stimulating scientific research, integrating new technologies, and supporting innovation and entrepreneurship in both sectors."
+      }
+    },
+    {
+      "name": {
+        "ar": "الدبلوماسية الاقتصادية والشراكات الدولية",
+        "en": "Economic diplomacy & international partnerships"
+      },
+      "desc": {
+        "ar": "بناء شراكات مع المؤسسات العربية والإقليمية والدولية لتعزيز موقع الدول العربية في الصناعات الطاقية والتعدينية.",
+        "en": "Building partnerships with Arab, regional and international institutions to strengthen the position of Arab countries in the energy and mining industries."
+      }
+    }
+  ],
+  "roadmap_title": {
+    "ar": "خارطة الطريق 2026–2030",
+    "en": "2026–2030 Roadmap"
+  },
+  "roadmap_sub": {
+    "ar": "كشفت اللجنة التأسيسية في الندوة الصحفية التي أعقبت الجمعية العمومية عن البرنامج السنوي للاتحاد وخارطة الطريق الممتدة بين 2026 و2030، والتي تهدف إلى إطلاق مبادرات ومشاريع وشراكات تخدم تنمية قطاعي الطاقة والمعادن في الدول العربية.",
+    "en": "At the press conference following the General Assembly, the founding committee unveiled the Union's annual programme and its 2026–2030 roadmap, designed to launch initiatives, projects and partnerships serving the development of the energy and minerals sectors in Arab countries."
+  },
+  "roadmap": [
+    {
+      "year": "2026",
+      "text": {
+        "ar": "استكمال البناء المؤسسي: تشكيل المجلس الأعلى ومجلس الإدارة والأمانة العامة واللجان المتخصصة، وإطلاق العضوية.",
+        "en": "Completing the institutional build-out: forming the Superior Council, Board of Directors, General Secretariat and specialized commissions, and launching membership."
+      }
+    },
+    {
+      "year": "2027",
+      "text": {
+        "ar": "تفعيل شبكة التعاون وبناء الشراكات مع المؤسسات العربية والإقليمية والدولية وإطلاق أولى المبادرات القطاعية.",
+        "en": "Activating the cooperation network, building partnerships with Arab, regional and international institutions, and launching first sectoral initiatives."
+      }
+    },
+    {
+      "year": "2028",
+      "text": {
+        "ar": "إطلاق مشاريع مهيكلة في الانتقال الطاقي والتعدين المستدام وبرامج البحث والابتكار ونقل التكنولوجيا.",
+        "en": "Launching structured projects in energy transition and sustainable mining, and programmes for research, innovation and technology transfer."
+      }
+    },
+    {
+      "year": "2029",
+      "text": {
+        "ar": "تعزيز الاستثمار العربي والدولي ومواكبة تحول الفرص إلى شراكات استراتيجية ومشاريع ملموسة.",
+        "en": "Advancing Arab and international investment and turning opportunities into strategic partnerships and concrete projects."
+      }
+    },
+    {
+      "year": "2030",
+      "text": {
+        "ar": "ترسيخ مكانة الاتحاد كمنصة عربية مرجعية وقياس أثر مبادراته على التنمية المستدامة والتكامل الاقتصادي.",
+        "en": "Consolidating the Union's standing as the Arab reference platform and measuring its initiatives' impact on sustainable development and economic integration."
+      }
+    }
+  ]
+}

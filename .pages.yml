@@ -1,0 +1,1032 @@
+# ============================================================
+#  Pages CMS configuration — AUEM website
+#  https://app.pagescms.org  →  repository: engziada/AUEM
+#
+#  This file decides WHAT the web admin can edit and WHERE the
+#  values are stored. The site is rebuilt by GitHub Actions from
+#  content/**/*.json after every save, so a change is live in
+#  about one or two minutes.
+#
+#  Editing rules for developers:
+#    * keep field names identical to the JSON keys in content/
+#    * run `python tools/check_content.py` after changing anything
+# ============================================================
+
+# ---------- media (uploaded files) ----------
+# Uploads are committed to the repository; build.py downscales them
+# into dist/ (thumbnails included) without touching the originals.
+media:
+  - name: pages
+    label: "صور الصفحات — Page images"
+    input: assets/img/uploads/pages
+    output: /assets/img/uploads/pages
+    categories: [image]
+    rename: random
+
+  - name: news
+    label: "صور الأخبار — News images"
+    input: assets/img/uploads/news
+    output: /assets/img/uploads/news
+    categories: [image]
+    rename: random
+
+  - name: events
+    label: "صور الفعاليات — Event images"
+    input: assets/img/uploads/events
+    output: /assets/img/uploads/events
+    categories: [image]
+    rename: random
+
+  - name: gallery
+    label: "صور المعرض — Gallery photos"
+    input: assets/img/uploads/gallery
+    output: /assets/img/uploads/gallery
+    categories: [image]
+    rename: random
+
+# ---------- reusable bilingual fields ----------
+components:
+  # short single-line text
+  text:
+    type: object
+    label: "عربي / English"
+    fields:
+      - name: ar
+        label: "العربية"
+        type: string
+      - name: en
+        label: "English"
+        type: string
+
+  # long text: one paragraph per line
+  longtext:
+    type: object
+    label: "عربي / English"
+    fields:
+      - name: ar
+        label: "العربية — فقرة واحدة في كل سطر"
+        type: text
+      - name: en
+        label: "English — one paragraph per line"
+        type: text
+
+  # short label, safe to leave empty
+  optional:
+    type: object
+    label: "عربي / English"
+    fields:
+      - name: ar
+        label: "العربية"
+        type: string
+      - name: en
+        label: "English"
+        type: string
+
+# ---------- editable content ----------
+content:
+  # ==========================================================
+  #  1. Media & newsroom — the day-to-day work
+  # ==========================================================
+  - name: newsroom
+    label: "الأخبار والفعاليات — Newsroom"
+    type: group
+    items:
+      - name: news
+        label: "الأخبار — News articles"
+        type: collection
+        path: content/news
+        format: json
+        exclude: ["README.md"]
+        filename:
+          template: "{year}-{month}-{day}-{hour}{minute}-{primary}.json"
+          field: create
+        view:
+          fields: [date, title, published]
+          primary: title
+          sort: [date, title]
+          default:
+            sort: date
+            order: desc
+        fields:
+          - name: title
+            label: "العنوان — Title"
+            component: text
+            required: true
+          - name: date
+            label: "تاريخ النشر — Publication date"
+            type: date
+            required: true
+            options:
+              format: yyyy-MM-dd
+          - name: summary
+            label: "ملخص قصير يظهر في الصفحة الرئيسية — Short summary (home page)"
+            component: optional
+          - name: body
+            label: "نص الخبر — Full text"
+            component: longtext
+          - name: image
+            label: "صورة الخبر — Article image"
+            type: image
+            options:
+              media: news
+              categories: [image]
+          - name: source
+            label: "المصدر — Source name"
+            type: string
+          - name: source_url
+            label: "رابط المصدر — Source URL"
+            type: string
+          - name: published
+            label: "منشور — Published"
+            type: boolean
+            default: true
+
+      - name: events
+        label: "الفعاليات — Events"
+        type: collection
+        path: content/events
+        format: json
+        exclude: ["README.md"]
+        filename:
+          template: "{year}-{month}-{day}-{hour}{minute}-{primary}.json"
+          field: create
+        view:
+          fields: [start_date, title, published]
+          primary: title
+          sort: [start_date, title]
+          default:
+            sort: start_date
+            order: desc
+        fields:
+          - name: title
+            label: "اسم الفعالية — Event title"
+            component: text
+            required: true
+          - name: start_date
+            label: "تاريخ البداية — Start date"
+            type: date
+            required: true
+            options:
+              format: yyyy-MM-dd
+          - name: end_date
+            label: "تاريخ النهاية (اختياري) — End date (optional)"
+            type: date
+            default: ""
+            options:
+              format: yyyy-MM-dd
+          - name: location
+            label: "المكان — Location"
+            component: optional
+          - name: summary
+            label: "وصف مختصر — Short description"
+            component: optional
+          - name: body
+            label: "تفاصيل الفعالية — Details"
+            component: longtext
+          - name: image
+            label: "صورة الفعالية — Event image"
+            type: image
+            options:
+              media: events
+              categories: [image]
+          - name: registration_url
+            label: "رابط التسجيل — Registration URL"
+            type: string
+          - name: published
+            label: "منشور — Published"
+            type: boolean
+            default: true
+
+      - name: announcements
+        label: "الإعلانات — Announcements"
+        type: collection
+        path: content/announcements
+        format: json
+        exclude: ["README.md"]
+        filename:
+          template: "{year}-{month}-{day}-{hour}{minute}.json"
+          field: create
+        view:
+          fields: [date, title, active]
+          primary: title
+          sort: [date, title]
+          default:
+            sort: date
+            order: desc
+        fields:
+          - name: title
+            label: "العنوان — Title"
+            component: text
+            required: true
+          - name: body
+            label: "نص الإعلان — Announcement text"
+            component: optional
+          - name: date
+            label: "التاريخ — Date"
+            type: date
+            required: true
+            options:
+              format: yyyy-MM-dd
+          - name: expires
+            label: "ينتهي في (اختياري) — Expires on (optional)"
+            type: date
+            default: ""
+            options:
+              format: yyyy-MM-dd
+          - name: level
+            label: "الأهمية — Importance"
+            type: select
+            default: info
+            options:
+              values:
+                - name: info
+                  label: "عادي — Normal"
+                - name: important
+                  label: "مهم — Important"
+          - name: link_url
+            label: "رابط الزر (اختياري) — Button URL (optional)"
+            type: string
+          - name: link_label
+            label: "نص الزر — Button label"
+            component: optional
+          - name: active
+            label: "مفعّل ويظهر في شريط الموقع — Active (show on the site)"
+            type: boolean
+            default: false
+
+      - name: gallery
+        label: "معرض الصور — Gallery photos"
+        type: collection
+        path: content/gallery
+        format: json
+        exclude: ["README.md"]
+        filename:
+          template: "{year}-{month}-{day}-{hour}{minute}.json"
+          field: create
+        view:
+          fields: [date, image, caption]
+          primary: caption
+          sort: [date]
+          default:
+            sort: date
+            order: desc
+        fields:
+          - name: image
+            label: "الصورة — Photo"
+            type: image
+            required: true
+            options:
+              media: gallery
+              categories: [image]
+          - name: caption
+            label: "التعليق — Caption"
+            component: optional
+          - name: date
+            label: "التاريخ — Date"
+            type: date
+            required: true
+            options:
+              format: yyyy-MM-dd
+          - name: published
+            label: "منشور — Published"
+            type: boolean
+            default: true
+
+  # ==========================================================
+  #  2. Page copy — every text on the site
+  # ==========================================================
+  - name: pages
+    label: "صفحات الموقع — Website pages"
+    type: group
+    items:
+      - name: page_home
+        label: "الرئيسية — Home"
+        type: file
+        path: content/pages/index.json
+        format: json
+        fields:
+          - name: title
+            label: "عنوان الصفحة — Page title"
+            component: text
+          - name: meta
+            label: "وصف محركات البحث — Meta description"
+            component: longtext
+          - name: hero_kicker
+            label: "سطر أعلى العنوان — Hero kicker"
+            component: text
+          - name: hero_sub
+            label: "مقدمة الواجهة — Hero intro"
+            component: longtext
+          - name: cta_primary
+            label: "زر رئيسي — Primary button"
+            component: text
+          - name: cta_secondary
+            label: "زر ثانوي — Secondary button"
+            component: text
+          - name: stats_title
+            label: "عنوان الأرقام — Stats title"
+            component: text
+          - name: stats
+            label: "الأرقام — Key figures"
+            type: object
+            list: true
+            fields:
+              - name: value
+                label: "الرقم — Value"
+                component: text
+              - name: label
+                label: "الوصف — Label"
+                component: text
+          - name: sectors_title
+            label: "عنوان القطاعات — Sectors title"
+            component: text
+          - name: sectors_sub
+            label: "وصف القطاعات — Sectors intro"
+            component: longtext
+          - name: sectors
+            label: "القطاعات — Sectors"
+            type: object
+            list: true
+            fields:
+              - name: icon
+                label: "الأيقونة — Icon"
+                type: select
+                options:
+                  values:
+                    - name: oil
+                      label: "بترول — Oil"
+                    - name: mining
+                      label: "تعدين — Mining"
+                    - name: renewable
+                      label: "طاقة متجددة — Renewables"
+                    - name: invest
+                      label: "استثمار — Investment"
+              - name: name
+                label: "الاسم — Name"
+                component: text
+              - name: desc
+                label: "الوصف — Description"
+                component: longtext
+          - name: about_teaser_title
+            label: "عنوان التعريف — About teaser title"
+            component: text
+          - name: about_teaser
+            label: "نص التعريف — About teaser"
+            component: longtext
+          - name: about_more
+            label: "رابط المزيد — About link label"
+            component: text
+          - name: news_title
+            label: "عنوان الأخبار — News title"
+            component: text
+          - name: news_more
+            label: "كل الأخبار — All news label"
+            component: text
+          - name: events_title
+            label: "عنوان الفعاليات — Events title"
+            component: text
+          - name: events_more
+            label: "كل الفعاليات — All events label"
+            component: text
+          - name: gallery_title
+            label: "عنوان المعرض — Gallery title"
+            component: text
+          - name: gallery_sub
+            label: "وصف المعرض — Gallery intro"
+            component: longtext
+          - name: gallery_more
+            label: "زيارة المعرض — Gallery link label"
+            component: text
+          - name: partners_title
+            label: "عنوان الشركاء — Partners title"
+            component: text
+          - name: partners_sub
+            label: "وصف الشركاء — Partners intro"
+            component: longtext
+          - name: partners
+            label: "الشركاء — Partners"
+            type: object
+            list: true
+            fields:
+              - name: ar
+                label: "العربية"
+                type: string
+              - name: en
+                label: "English"
+                type: string
+          - name: join_title
+            label: "عنوان الانضمام — Join title"
+            component: text
+          - name: join_sub
+            label: "نص الانضمام — Join intro"
+            component: longtext
+          - name: join_cta
+            label: "زر الانضمام — Join button"
+            component: text
+
+      - name: page_about
+        label: "عن الاتحاد — About"
+        type: file
+        path: content/pages/about.json
+        format: json
+        fields:
+          - name: title
+            label: "عنوان الصفحة — Page title"
+            component: text
+          - name: meta
+            label: "وصف محركات البحث — Meta description"
+            component: longtext
+          - name: intro_title
+            label: "عنوان التأسيس — Establishment title"
+            component: text
+          - name: intro
+            label: "نص التأسيس — Establishment text"
+            component: longtext
+          - name: vision_title
+            label: "عنوان الرؤية — Vision title"
+            component: text
+          - name: vision
+            label: "الرؤية — Vision"
+            component: longtext
+          - name: mission_title
+            label: "عنوان الرسالة — Mission title"
+            component: text
+          - name: mission
+            label: "الرسالة — Mission"
+            component: longtext
+          - name: context_title
+            label: "عنوان السياق — Context title"
+            component: text
+          - name: context
+            label: "السياق الاستراتيجي — Context"
+            component: longtext
+          - name: pillars_title
+            label: "عنوان المرتكزات — Pillars title"
+            component: text
+          - name: pillars
+            label: "المرتكزات — Pillars"
+            type: object
+            list: true
+            fields:
+              - name: ar
+                label: "العربية"
+                type: string
+              - name: en
+                label: "English"
+                type: string
+          - name: president_title
+            label: "عنوان كلمة الرئيس — President section title"
+            component: text
+          - name: president_name
+            label: "اسم الرئيس — President name"
+            component: text
+          - name: president_role
+            label: "صفة الرئيس — President role"
+            component: text
+          - name: president_quote
+            label: "الاقتباس — Quote"
+            component: longtext
+          - name: president_photo
+            label: "صورة الرئيس (اختياري) — President photo (optional)"
+            type: image
+            options:
+              media: pages
+              categories: [image]
+          - name: timeline_title
+            label: "عنوان المحطات — Milestones title"
+            component: text
+          - name: timeline
+            label: "المحطات — Milestones"
+            type: object
+            list: true
+            fields:
+              - name: date
+                label: "التاريخ — Date"
+                type: string
+              - name: text
+                label: "الوصف — Text"
+                component: longtext
+
+      - name: page_objectives
+        label: "الأهداف — Objectives"
+        type: file
+        path: content/pages/objectives.json
+        format: json
+        fields:
+          - name: title
+            label: "عنوان الصفحة — Page title"
+            component: text
+          - name: meta
+            label: "وصف محركات البحث — Meta description"
+            component: longtext
+          - name: intro
+            label: "المقدمة — Intro"
+            component: longtext
+          - name: items
+            label: "الأهداف — Objectives"
+            type: object
+            list: true
+            fields:
+              - name: ar
+                label: "العربية"
+                type: text
+              - name: en
+                label: "English"
+                type: text
+
+      - name: page_governance
+        label: "الهيكل التنظيمي — Governance"
+        type: file
+        path: content/pages/governance.json
+        format: json
+        fields:
+          - name: title
+            label: "عنوان الصفحة — Page title"
+            component: text
+          - name: meta
+            label: "وصف محركات البحث — Meta description"
+            component: longtext
+          - name: intro
+            label: "المقدمة — Intro"
+            component: longtext
+          - name: bodies_title
+            label: "عنوان الأجهزة — Organs title"
+            component: text
+          - name: bodies
+            label: "الأجهزة — Organs"
+            type: object
+            list: true
+            fields:
+              - name: name
+                label: "الاسم — Name"
+                component: text
+              - name: desc
+                label: "الوصف — Description"
+                component: longtext
+          - name: commissions_title
+            label: "عنوان اللجان — Commissions title"
+            component: text
+          - name: commissions_sub
+            label: "وصف اللجان — Commissions intro"
+            component: longtext
+          - name: commissions
+            label: "اللجان — Commissions"
+            type: object
+            list: true
+            fields:
+              - name: ar
+                label: "العربية"
+                type: string
+              - name: en
+                label: "English"
+                type: string
+          - name: leadership_title
+            label: "عنوان القيادة — Leadership title"
+            component: text
+          - name: leaders
+            label: "القيادة — Leadership"
+            type: object
+            list: true
+            fields:
+              - name: name
+                label: "الاسم — Name"
+                component: text
+              - name: role
+                label: "الصفة — Role"
+                component: text
+              - name: photo
+                label: "الصورة (اختياري) — Photo (optional)"
+                type: image
+                options:
+                  media: pages
+                  categories: [image]
+
+      - name: page_membership
+        label: "العضوية — Membership"
+        type: file
+        path: content/pages/membership.json
+        format: json
+        fields:
+          - name: title
+            label: "عنوان الصفحة — Page title"
+            component: text
+          - name: meta
+            label: "وصف محركات البحث — Meta description"
+            component: longtext
+          - name: intro_title
+            label: "عنوان المقدمة — Intro title"
+            component: text
+          - name: intro
+            label: "من يمكنه الانضمام — Who can join"
+            component: longtext
+          - name: benefits_title
+            label: "عنوان المزايا — Benefits title"
+            component: text
+          - name: benefits
+            label: "المزايا — Benefits"
+            type: object
+            list: true
+            fields:
+              - name: ar
+                label: "العربية"
+                type: text
+              - name: en
+                label: "English"
+                type: text
+          - name: how_title
+            label: "عنوان خطوات الانضمام — How to join title"
+            component: text
+          - name: how
+            label: "خطوات الانضمام — How to join"
+            component: longtext
+          - name: note
+            label: "ملاحظة — Note"
+            component: longtext
+          - name: cta
+            label: "نص الزر — Button label"
+            component: text
+
+      - name: page_activities
+        label: "الأنشطة — Activities"
+        type: file
+        path: content/pages/activities.json
+        format: json
+        fields:
+          - name: title
+            label: "عنوان الصفحة — Page title"
+            component: text
+          - name: meta
+            label: "وصف محركات البحث — Meta description"
+            component: longtext
+          - name: intro
+            label: "المقدمة — Intro"
+            component: longtext
+          - name: streams
+            label: "مجالات العمل — Workstreams"
+            type: object
+            list: true
+            fields:
+              - name: name
+                label: "الاسم — Name"
+                component: text
+              - name: desc
+                label: "الوصف — Description"
+                component: longtext
+          - name: roadmap_title
+            label: "عنوان خارطة الطريق — Roadmap title"
+            component: text
+          - name: roadmap_sub
+            label: "وصف خارطة الطريق — Roadmap intro"
+            component: longtext
+          - name: roadmap
+            label: "خارطة الطريق — Roadmap"
+            type: object
+            list: true
+            fields:
+              - name: year
+                label: "السنة — Year"
+                type: string
+              - name: text
+                label: "الوصف — Text"
+                component: longtext
+
+      - name: page_news
+        label: "صفحة الأخبار — News page"
+        type: file
+        path: content/pages/news.json
+        format: json
+        fields:
+          - name: title
+            label: "عنوان الصفحة — Page title"
+            component: text
+          - name: meta
+            label: "وصف محركات البحث — Meta description"
+            component: longtext
+          - name: intro
+            label: "المقدمة — Intro"
+            component: longtext
+          - name: announcements_title
+            label: "عنوان الإعلانات — Announcements title"
+            component: text
+          - name: sources_title
+            label: "عنوان المصادر — Sources title"
+            component: text
+          - name: sources
+            label: "مصادر التغطية — Press sources"
+            type: object
+            list: true
+            fields:
+              - name: title
+                label: "اسم المصدر — Source name"
+                type: string
+              - name: url
+                label: "الرابط — URL"
+                type: string
+          - name: empty_text
+            label: "نص عند عدم وجود أخبار — Empty state"
+            component: text
+
+      - name: page_events
+        label: "صفحة الفعاليات — Events page"
+        type: file
+        path: content/pages/events.json
+        format: json
+        fields:
+          - name: title
+            label: "عنوان الصفحة — Page title"
+            component: text
+          - name: meta
+            label: "وصف محركات البحث — Meta description"
+            component: longtext
+          - name: intro
+            label: "المقدمة — Intro"
+            component: longtext
+          - name: upcoming_title
+            label: "عنوان القادم — Upcoming title"
+            component: text
+          - name: past_title
+            label: "عنوان السابق — Past title"
+            component: text
+          - name: empty_upcoming
+            label: "نص عند عدم وجود فعاليات قادمة — Empty upcoming"
+            component: text
+          - name: empty_past
+            label: "نص عند عدم وجود فعاليات سابقة — Empty past"
+            component: text
+          - name: register_label
+            label: "نص زر التسجيل — Register label"
+            component: text
+
+      - name: page_gallery
+        label: "صفحة المعرض — Gallery page"
+        type: file
+        path: content/pages/gallery.json
+        format: json
+        fields:
+          - name: title
+            label: "عنوان الصفحة — Page title"
+            component: text
+          - name: meta
+            label: "وصف محركات البحث — Meta description"
+            component: longtext
+          - name: intro
+            label: "المقدمة — Intro"
+            component: longtext
+          - name: empty_text
+            label: "نص عند عدم وجود صور — Empty state"
+            component: text
+
+      - name: page_unions
+        label: "الاتحادات العربية — Arab Unions"
+        type: file
+        path: content/pages/unions.json
+        format: json
+        fields:
+          - name: title
+            label: "عنوان الصفحة — Page title"
+            component: text
+          - name: meta
+            label: "وصف محركات البحث — Meta description"
+            component: longtext
+          - name: intro_title
+            label: "عنوان المقدمة — Intro title"
+            component: text
+          - name: intro
+            label: "المقدمة — Intro"
+            component: longtext
+          - name: groups
+            label: "مجموعات الاتحادات — Union groups"
+            type: object
+            list: true
+            fields:
+              - name: name
+                label: "اسم المجموعة — Group name"
+                component: text
+              - name: items
+                label: "الاتحادات — Unions"
+                type: object
+                list: true
+                fields:
+                  - name: name
+                    label: "الاسم — Name"
+                    component: text
+                  - name: est
+                    label: "سنة التأسيس — Founded"
+                    type: string
+                  - name: desc
+                    label: "الوصف — Description"
+                    component: longtext
+                  - name: hq
+                    label: "المقر — Headquarters"
+                    component: text
+          - name: orgs_title
+            label: "عنوان المنظمات — Organisations title"
+            component: text
+          - name: orgs_sub
+            label: "وصف المنظمات — Organisations intro"
+            component: longtext
+          - name: orgs
+            label: "منظمات جامعة الدول العربية — League organisations"
+            type: object
+            list: true
+            fields:
+              - name: name
+                label: "الاسم — Name"
+                component: text
+              - name: est
+                label: "سنة التأسيس — Founded"
+                type: string
+              - name: hq
+                label: "المقر — Headquarters"
+                component: text
+          - name: note
+            label: "ملاحظة — Note"
+            component: longtext
+
+      - name: page_contact
+        label: "اتصل بنا — Contact"
+        type: file
+        path: content/pages/contact.json
+        format: json
+        fields:
+          - name: title
+            label: "عنوان الصفحة — Page title"
+            component: text
+          - name: meta
+            label: "وصف محركات البحث — Meta description"
+            component: longtext
+          - name: intro
+            label: "المقدمة — Intro"
+            component: longtext
+          - name: hq_title
+            label: "عنوان المقر — Headquarters title"
+            component: text
+          - name: hq_value
+            label: "المقر — Headquarters"
+            component: text
+          - name: topics_title
+            label: "عنوان الموضوعات — Topics title"
+            component: text
+          - name: topics
+            label: "الموضوعات — Topics"
+            type: object
+            list: true
+            fields:
+              - name: ar
+                label: "العربية"
+                type: text
+              - name: en
+                label: "English"
+                type: text
+          - name: form_name
+            label: "حقل الاسم — Name field"
+            component: text
+          - name: form_org
+            label: "حقل الجهة — Organisation field"
+            component: text
+          - name: form_email
+            label: "حقل البريد — Email field"
+            component: text
+          - name: form_subject
+            label: "حقل الموضوع — Subject field"
+            component: text
+          - name: form_message
+            label: "حقل الرسالة — Message field"
+            component: text
+          - name: form_send
+            label: "زر الإرسال — Send button"
+            component: text
+          - name: form_note
+            label: "ملاحظة النموذج — Form note"
+            component: longtext
+
+  # ==========================================================
+  #  3. Global settings & chatbot
+  # ==========================================================
+  - name: settings
+    label: "إعدادات الموقع — Site settings"
+    type: file
+    path: content/settings.json
+    format: json
+    fields:
+      - name: name
+        label: "اسم الاتحاد — Organisation name"
+        component: text
+      - name: abbr
+        label: "الاختصار — Abbreviation"
+        type: string
+      - name: tagline
+        label: "الشعار — Tagline"
+        component: text
+      - name: hq
+        label: "المقر — Headquarters"
+        component: text
+      - name: site_url
+        label: "عنوان الموقع — Site URL"
+        type: string
+      - name: contact_email
+        label: "بريد التواصل — Contact email"
+        type: string
+      - name: nav
+        label: "قائمة التصفح — Navigation"
+        type: object
+        list: true
+        fields:
+          - name: page
+            label: "الصفحة — Page"
+            type: select
+            options:
+              values:
+                - name: index
+                  label: "الرئيسية — Home"
+                - name: about
+                  label: "عن الاتحاد — About"
+                - name: objectives
+                  label: "الأهداف — Objectives"
+                - name: governance
+                  label: "الهيكل التنظيمي — Governance"
+                - name: membership
+                  label: "العضوية — Membership"
+                - name: activities
+                  label: "الأنشطة — Activities"
+                - name: news
+                  label: "الأخبار — News"
+                - name: events
+                  label: "الفعاليات — Events"
+                - name: gallery
+                  label: "معرض الصور — Gallery"
+                - name: unions
+                  label: "اتحادات عربية — Arab Unions"
+                - name: contact
+                  label: "اتصل بنا — Contact"
+          - name: label
+            label: "التسمية — Label"
+            component: text
+      - name: footer
+        label: "تذييل الصفحة — Footer"
+        type: object
+        fields:
+          - name: about
+            label: "نبذة — About"
+            component: longtext
+          - name: links_title
+            label: "عنوان الروابط — Links title"
+            component: text
+          - name: contact_title
+            label: "عنوان التواصل — Contact title"
+            component: text
+          - name: rights
+            label: "حقوق النشر — Rights"
+            component: text
+          - name: disclaimer
+            label: "إخلاء المسؤولية — Disclaimer"
+            component: longtext
+
+  - name: chatbot
+    label: "المساعد الذكي — Chatbot knowledge"
+    type: file
+    path: content/chatbot.json
+    format: json
+    fields:
+      - name: name
+        label: "اسم المساعد — Assistant name"
+        component: text
+      - name: greeting
+        label: "التحية — Greeting"
+        component: longtext
+      - name: placeholder
+        label: "نص حقل الإدخال — Input placeholder"
+        component: text
+      - name: fallback
+        label: "رد عند عدم المعرفة — Fallback answer"
+        component: longtext
+      - name: suggestions
+        label: "أسئلة مقترحة — Suggested questions"
+        type: object
+        list: true
+        fields:
+          - name: ar
+            label: "العربية"
+            type: string
+          - name: en
+            label: "English"
+            type: string
+      - name: entries
+        label: "قاعدة المعرفة — Knowledge entries"
+        type: object
+        list: true
+        fields:
+          - name: keywords_ar
+            label: "كلمات مفتاحية (عربي) — Arabic keywords"
+            type: string
+            list: true
+          - name: keywords_en
+            label: "كلمات مفتاحية (إنجليزي) — English keywords"
+            type: string
+            list: true
+          - name: answer_ar
+            label: "الجواب (عربي) — Arabic answer"
+            type: text
+          - name: answer_en
+            label: "الجواب (إنجليزي) — English answer"
+            type: text

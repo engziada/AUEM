@@ -1,0 +1,152 @@
+{
+  "title": {
+    "ar": "الهيكل التنظيمي",
+    "en": "Governance"
+  },
+  "meta": {
+    "ar": "الهيكل التنظيمي والحكامة في الاتحاد العربي للطاقة والمعادن: المجلس الأعلى، مجلس الإدارة، الأمانة العامة، المجلس الاستشاري الدولي واللجان المتخصصة.",
+    "en": "Governance of the Arab Union for Energy & Minerals: Superior Council, Board of Directors, General Secretariat, International Advisory Council and specialized commissions."
+  },
+  "intro": {
+    "ar": "يعتمد الاتحاد حكامة متكاملة تضم مجلساً أعلى ومجلس إدارة وأمانة عامة ومجلساً استشارياً دولياً، بالإضافة إلى لجان متخصصة تغطي مجالات عمله.",
+    "en": "The Union relies on an integrated governance structure comprising a Superior Council, a Board of Directors, a General Secretariat, an International Advisory Council and specialized commissions covering its fields of work."
+  },
+  "bodies_title": {
+    "ar": "أجهزة الاتحاد",
+    "en": "Organs of the Union"
+  },
+  "bodies": [
+    {
+      "name": {
+        "ar": "المجلس الأعلى",
+        "en": "Superior Council"
+      },
+      "desc": {
+        "ar": "أعلى هيئة توجيهية في الاتحاد، تحدد التوجهات الاستراتيجية العامة.",
+        "en": "The Union's highest steering body; sets overall strategic directions."
+      }
+    },
+    {
+      "name": {
+        "ar": "مجلس الإدارة",
+        "en": "Board of Directors"
+      },
+      "desc": {
+        "ar": "يشرف على تنفيذ الاستراتيجيات وإدارة أعمال الاتحاد بين الدورات.",
+        "en": "Oversees implementation of strategies and the Union's business between sessions."
+      }
+    },
+    {
+      "name": {
+        "ar": "الأمانة العامة",
+        "en": "General Secretariat"
+      },
+      "desc": {
+        "ar": "الجهاز التنفيذي اليومي للاتحاد، تتولى التنسيق والمتابعة والتواصل.",
+        "en": "The Union's day-to-day executive arm, responsible for coordination, follow-up and communication."
+      }
+    },
+    {
+      "name": {
+        "ar": "المجلس الاستشاري الدولي",
+        "en": "International Advisory Council"
+      },
+      "desc": {
+        "ar": "يقدم الخبرة والمشورة الدولية لدعم قرارات الاتحاد وشراكاته.",
+        "en": "Provides international expertise and advice supporting the Union's decisions and partnerships."
+      }
+    }
+  ],
+  "commissions_title": {
+    "ar": "اللجان المتخصصة",
+    "en": "Specialized commissions"
+  },
+  "commissions_sub": {
+    "ar": "تغطي اللجان المتخصصة مجالات العمل القطاعية والموضوعية للاتحاد:",
+    "en": "Specialized commissions cover the Union's sectoral and thematic fields of work:"
+  },
+  "commissions": [
+    {
+      "ar": "الطاقة",
+      "en": "Energy"
+    },
+    {
+      "ar": "النفط",
+      "en": "Oil"
+    },
+    {
+      "ar": "الغاز",
+      "en": "Gas"
+    },
+    {
+      "ar": "المعادن والتعدين",
+      "en": "Minerals & Mining"
+    },
+    {
+      "ar": "الطاقات المتجددة",
+      "en": "Renewable Energies"
+    },
+    {
+      "ar": "الاستثمار",
+      "en": "Investment"
+    },
+    {
+      "ar": "الابتكار وريادة الأعمال",
+      "en": "Innovation & Entrepreneurship"
+    },
+    {
+      "ar": "العلاقات الدولية",
+      "en": "International Relations"
+    }
+  ],
+  "leadership_title": {
+    "ar": "القيادة",
+    "en": "Leadership"
+  },
+  "leaders": [
+    {
+      "name": {
+        "ar": "المملكة المغربية",
+        "en": "Kingdom of Morocco"
+      },
+      "role": {
+        "ar": "رئاسة الاتحاد — انتخبت بالإجماع في الجمعية العمومية التأسيسية",
+        "en": "Presidency of the Union — unanimously elected at the inaugural General Assembly"
+      },
+      "photo": ""
+    },
+    {
+      "name": {
+        "ar": "صلاح الدين البدري",
+        "en": "Salah Eddine El Badry"
+      },
+      "role": {
+        "ar": "رئيس الاتحاد العربي للطاقة والمعادن",
+        "en": "President of the Arab Union for Energy & Minerals"
+      },
+      "photo": ""
+    },
+    {
+      "name": {
+        "ar": "إسماعيل الجنابي",
+        "en": "Ismaeil Al Janaby"
+      },
+      "role": {
+        "ar": "عضو مؤسس بمجلس إدارة الاتحاد",
+        "en": "Founding member of the Union's Board of Directors"
+      },
+      "photo": ""
+    },
+    {
+      "name": {
+        "ar": "شركة يونايتد بتروليوم",
+        "en": "United Petroleum"
+      },
+      "role": {
+        "ar": "العضو المؤسس والشريك الاستراتيجي",
+        "en": "Founding member and strategic partner"
+      },
+      "photo": ""
+    }
+  ]
+}

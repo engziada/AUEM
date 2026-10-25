@@ -1,0 +1,18 @@
+{
+  "title": {
+    "ar": "معرض الصور",
+    "en": "Gallery"
+  },
+  "meta": {
+    "ar": "صور من اجتماعات الاتحاد العربي للطاقة والمعادن وفعالياته.",
+    "en": "Photos from the meetings and events of the Arab Union for Energy & Minerals."
+  },
+  "intro": {
+    "ar": "أرشيف مصوّر لاجتماعات الاتحاد وفعالياته وأنشطته الميدانية.",
+    "en": "A photo archive of the Union's meetings, events and field activities."
+  },
+  "empty_text": {
+    "ar": "سيتم نشر صور الفعاليات هنا قريباً.",
+    "en": "Photos of our events will be published here soon."
+  }
+}

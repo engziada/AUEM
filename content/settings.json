@@ -1,0 +1,118 @@
+{
+  "name": {
+    "ar": "الاتحاد العربي للطاقة والمعادن",
+    "en": "Arab Union for Energy & Minerals"
+  },
+  "abbr": "AUEM",
+  "tagline": {
+    "ar": "المنصة العربية المرجعية للطاقة والمعادن",
+    "en": "The pan-Arab reference platform for energy and minerals"
+  },
+  "hq": {
+    "ar": "الدار البيضاء، المملكة المغربية",
+    "en": "Casablanca, Kingdom of Morocco"
+  },
+  "site_url": "https://engziada.github.io/AUEM",
+  "contact_email": "info@auem.org",
+  "nav": [
+    {
+      "page": "index",
+      "label": {
+        "ar": "الرئيسية",
+        "en": "Home"
+      }
+    },
+    {
+      "page": "about",
+      "label": {
+        "ar": "عن الاتحاد",
+        "en": "About"
+      }
+    },
+    {
+      "page": "objectives",
+      "label": {
+        "ar": "الأهداف",
+        "en": "Objectives"
+      }
+    },
+    {
+      "page": "governance",
+      "label": {
+        "ar": "الهيكل التنظيمي",
+        "en": "Governance"
+      }
+    },
+    {
+      "page": "membership",
+      "label": {
+        "ar": "العضوية",
+        "en": "Membership"
+      }
+    },
+    {
+      "page": "activities",
+      "label": {
+        "ar": "الأنشطة",
+        "en": "Activities"
+      }
+    },
+    {
+      "page": "news",
+      "label": {
+        "ar": "الأخبار",
+        "en": "News"
+      }
+    },
+    {
+      "page": "events",
+      "label": {
+        "ar": "الفعاليات",
+        "en": "Events"
+      }
+    },
+    {
+      "page": "gallery",
+      "label": {
+        "ar": "معرض الصور",
+        "en": "Gallery"
+      }
+    },
+    {
+      "page": "unions",
+      "label": {
+        "ar": "اتحادات عربية",
+        "en": "Arab Unions"
+      }
+    },
+    {
+      "page": "contact",
+      "label": {
+        "ar": "اتصل بنا",
+        "en": "Contact"
+      }
+    }
+  ],
+  "footer": {
+    "about": {
+      "ar": "منصة مؤسسية عربية تهدف إلى دفع العمل العربي المشترك في قطاعي الطاقة والمعادن، تأسست في يوليو 2026 ويتخذ من الدار البيضاء مقراً له.",
+      "en": "A pan-Arab institutional platform advancing joint Arab action in the energy and minerals sectors. Founded July 2026, headquartered in Casablanca."
+    },
+    "links_title": {
+      "ar": "روابط سريعة",
+      "en": "Quick links"
+    },
+    "contact_title": {
+      "ar": "تواصل",
+      "en": "Contact"
+    },
+    "rights": {
+      "ar": "جميع الحقوق محفوظة",
+      "en": "All rights reserved"
+    },
+    "disclaimer": {
+      "ar": "محتوى تعريفي مستند إلى التغطيات الصحفية الرسمية لإعلان التأسيس.",
+      "en": "Informational content based on official press coverage of the founding announcement."
+    }
+  }
+}

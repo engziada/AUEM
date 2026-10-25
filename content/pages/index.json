@@ -1,0 +1,212 @@
+{
+  "title": {
+    "ar": "الرئيسية",
+    "en": "Home"
+  },
+  "meta": {
+    "ar": "الاتحاد العربي للطاقة والمعادن — منصة مؤسسية لتعزيز العمل العربي المشترك في قطاعي الطاقة والمعادن. المقر: الدار البيضاء، المغرب.",
+    "en": "The Arab Union for Energy & Minerals — an institutional platform advancing joint Arab action in the energy and minerals sectors. Headquarters: Casablanca, Morocco."
+  },
+  "hero_kicker": {
+    "ar": "تأسس الإتحاد في 23 يوليو 2026 — سلا، المملكة المغربية",
+    "en": "Founded 23 July 2026 — Salé, Kingdom of Morocco"
+  },
+  "hero_sub": {
+    "ar": "منصة مؤسسية جديدة تهدف إلى دفع دينامية جديدة للعمل العربي المشترك في قطاعي الطاقة والمعادن، وتحويل الموارد الطاقية والمعدنية في العالم العربي إلى مشاريع مهيكلة وشراكات استراتيجية وفرص استثمارية ملموسة.",
+    "en": "A new institutional platform driving joint Arab action across the energy and minerals sectors, turning the Arab world's energy and mineral resources into structured projects, strategic partnerships and concrete investment opportunities."
+  },
+  "cta_primary": {
+    "ar": "تعرف على الاتحاد",
+    "en": "Discover the Union"
+  },
+  "cta_secondary": {
+    "ar": "انضم إلينا",
+    "en": "Become a member"
+  },
+  "stats_title": {
+    "ar": "الاتحاد في لمحة",
+    "en": "The Union at a glance"
+  },
+  "stats": [
+    {
+      "value": {
+        "ar": "23 يوليو 2026",
+        "en": "23 July 2026"
+      },
+      "label": {
+        "ar": "الجمعية العمومية التأسيسية بمدينة سلا المغربية",
+        "en": "Inaugural General Assembly held in Salé, Morocco"
+      }
+    },
+    {
+      "value": {
+        "ar": "الدار البيضاء",
+        "en": "Casablanca"
+      },
+      "label": {
+        "ar": "المقر الرئيسي للاتحاد",
+        "en": "Headquarters of the Union"
+      }
+    },
+    {
+      "value": {
+        "ar": "المغرب",
+        "en": "Morocco"
+      },
+      "label": {
+        "ar": "انتخب بالإجماع لرئاسة الاتحاد",
+        "en": "Unanimously elected to the presidency"
+      }
+    },
+    {
+      "value": {
+        "ar": "8 لجان متخصصة",
+        "en": "8 specialized commissions"
+      },
+      "label": {
+        "ar": "تغطي الطاقة والنفط والغاز والمعادن والطاقات المتجددة والاستثمار والابتكار والعلاقات الدولية",
+        "en": "Covering energy, oil, gas, minerals, renewables, investment, innovation and international relations"
+      }
+    }
+  ],
+  "sectors_title": {
+    "ar": "القطاعات التي نعمل فيها",
+    "en": "Sectors we serve"
+  },
+  "sectors_sub": {
+    "ar": "يعمل الاتحاد على توحيد الرؤى وتنسيق خطط العمل بين الفاعلين في قطاعي الطاقة والمعادن في الدول العربية.",
+    "en": "The Union unifies visions and coordinates action plans among stakeholders in the Arab energy and minerals sectors."
+  },
+  "sectors": [
+    {
+      "icon": "oil",
+      "name": {
+        "ar": "النفط والغاز",
+        "en": "Oil & Gas"
+      },
+      "desc": {
+        "ar": "تنسيق الرؤى وخطط العمل بين الفاعلين في قطاع النفط والغاز في ظل تقلبات الأسواق العالمية.",
+        "en": "Coordinating visions and action plans among oil and gas stakeholders amid global market volatility."
+      }
+    },
+    {
+      "icon": "mining",
+      "name": {
+        "ar": "المعادن والتعدين",
+        "en": "Minerals & Mining"
+      },
+      "desc": {
+        "ar": "تطوير قطاع تعديني عربي يتماشى مع أفضل الممارسات الدولية ويعزز السيادة الصناعية.",
+        "en": "Developing an Arab mining sector aligned with international best practices and industrial sovereignty."
+      }
+    },
+    {
+      "icon": "renewable",
+      "name": {
+        "ar": "الطاقات المتجددة",
+        "en": "Renewable Energy"
+      },
+      "desc": {
+        "ar": "مواكبة الانتقال الطاقي عبر دعم مشاريع الطاقة المتجددة والهيدروجين الأخضر وكفاءة الطاقة.",
+        "en": "Supporting the energy transition through renewables, green hydrogen and energy-efficiency projects."
+      }
+    },
+    {
+      "icon": "invest",
+      "name": {
+        "ar": "الاستثمار والشراكات",
+        "en": "Investment & Partnerships"
+      },
+      "desc": {
+        "ar": "تشجيع الاستثمارات العربية والدولية وتثمين الفرص الكامنة في دول المنطقة.",
+        "en": "Promoting Arab and international investment and valorizing opportunities across the region."
+      }
+    }
+  ],
+  "about_teaser_title": {
+    "ar": "من نحن",
+    "en": "Who we are"
+  },
+  "about_teaser": {
+    "ar": "الاتحاد العربي للطاقة والمعادن منظمة مهنية عربية أُعلن عن تأسيسها خلال جمعيتها العمومية التأسيسية المنعقدة بمدينة سلا بالمملكة المغربية في 23 يوليو 2026، وانتخب المغرب بالإجماع لرئاستها، ويستضيف مقرها في الدار البيضاء. يطمح الاتحاد إلى أن يصبح المنصة العربية المرجعية التي تجعل من الطاقة والمعادن روافع للتنمية المستدامة والتكامل الاقتصادي الإقليمي.",
+    "en": "The Arab Union for Energy & Minerals is a pan-Arab professional organization whose establishment was announced at its inaugural General Assembly in Salé, Kingdom of Morocco, on 23 July 2026. Morocco was unanimously elected to its presidency, and its headquarters is hosted in Casablanca. The Union aspires to become the Arab reference platform making energy and minerals levers of sustainable development and regional economic integration."
+  },
+  "about_more": {
+    "ar": "اقرأ المزيد عن الاتحاد",
+    "en": "Read more about the Union"
+  },
+  "news_title": {
+    "ar": "آخر الأخبار",
+    "en": "Latest news"
+  },
+  "news_more": {
+    "ar": "جميع الأخبار",
+    "en": "All news"
+  },
+  "events_title": {
+    "ar": "الفعاليات القادمة",
+    "en": "Upcoming events"
+  },
+  "events_more": {
+    "ar": "كل الفعاليات",
+    "en": "All events"
+  },
+  "gallery_title": {
+    "ar": "من معرض الصور",
+    "en": "From the gallery"
+  },
+  "gallery_sub": {
+    "ar": "لمحات من اجتماعات الاتحاد وفعالياته وأنشطته الميدانية.",
+    "en": "Highlights from the Union's meetings, events and field activities."
+  },
+  "gallery_more": {
+    "ar": "زيارة المعرض",
+    "en": "Visit the gallery"
+  },
+  "partners_title": {
+    "ar": "شراكات مرتقبة",
+    "en": "Envisioned partnerships"
+  },
+  "partners_sub": {
+    "ar": "يعمل الاتحاد على بناء شراكات مع مؤسسات عربية وإقليمية ودولية، وشركات الطاقة والتعدين ومراكز البحث والجامعات.",
+    "en": "The Union is building partnerships with Arab, regional and international institutions, energy and mining companies, research centers and universities."
+  },
+  "partners": [
+    {
+      "ar": "جامعة الدول العربية",
+      "en": "League of Arab States"
+    },
+    {
+      "ar": "مجلس الوحدة الاقتصادية العربية",
+      "en": "Council of Arab Economic Unity"
+    },
+    {
+      "ar": "المنظمة العربية للتنمية الصناعية والتقييس والتعدين",
+      "en": "Arab Industrial Development, Standardization & Mining Organization"
+    },
+    {
+      "ar": "البنك الإسلامي للتنمية",
+      "en": "Islamic Development Bank"
+    },
+    {
+      "ar": "البنك الإفريقي للتنمية",
+      "en": "African Development Bank"
+    },
+    {
+      "ar": "الاتحاد الإفريقي",
+      "en": "African Union"
+    }
+  ],
+  "join_title": {
+    "ar": "كن جزءاً من العمل العربي المشترك",
+    "en": "Be part of joint Arab action"
+  },
+  "join_sub": {
+    "ar": "يضم الاتحاد فاعلين اقتصاديين ومؤسسات وشركات وخبراء من القطاع الخاص في الدول العربية في قطاعي الطاقة والمعادن.",
+    "en": "The Union brings together economic actors, institutions, companies and experts from the private sector of Arab countries in the energy and minerals sectors."
+  },
+  "join_cta": {
+    "ar": "طلب العضوية",
+    "en": "Request membership"
+  }
+}

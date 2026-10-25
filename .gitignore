@@ -4,3 +4,10 @@ __pycache__/
 logs/
 graphify-out/
 dist/
+
+# local build / verification scratch folders
+.preview/
+.test_assets/
+.baseline/
+.baseline_src/
+.smoke-*/

@@ -1,0 +1,52 @@
+{
+  "title": {
+    "ar": "الأخبار",
+    "en": "News"
+  },
+  "meta": {
+    "ar": "أخبار الاتحاد العربي للطاقة والمعادن وتغطيات تأسيسه الإعلامية.",
+    "en": "News and media coverage of the Arab Union for Energy & Minerals."
+  },
+  "intro": {
+    "ar": "تابع آخر أخبار الاتحاد وبياناته الصحفية وتغطياته الإعلامية.",
+    "en": "Follow the Union's latest news, press releases and media coverage."
+  },
+  "announcements_title": {
+    "ar": "إعلانات",
+    "en": "Announcements"
+  },
+  "sources_title": {
+    "ar": "مصادر التغطية الصحفية",
+    "en": "Press coverage sources"
+  },
+  "sources": [
+    {
+      "title": "وكالة المغرب العربي للأنباء / الدار",
+      "url": "https://aldar.ma/448235.html"
+    },
+    {
+      "title": "جريدة المستقبل 24",
+      "url": "https://almostakbal24.ma/2026/07/23/arab-energy-minerals-union-rabat/"
+    },
+    {
+      "title": "كونسونيوز",
+      "url": "https://ar.consonews.ma/31547.html"
+    },
+    {
+      "title": "الرباط نيوز",
+      "url": "https://www.ribatnews.com/artciles/102807"
+    },
+    {
+      "title": "MCG24 (English)",
+      "url": "https://en.mcg24.com/sale-establishment-of-the-arab-union-for-energy-and-mines-led-by-morocco/"
+    },
+    {
+      "title": "Fédération de l'Energie (Français)",
+      "url": "https://www.fedenerg.ma/2026/07/28/lunion-arabe-de-lenergie-et-des-mines-voit-le-jour/"
+    }
+  ],
+  "empty_text": {
+    "ar": "لا توجد أخبار منشورة حالياً.",
+    "en": "No news published yet."
+  }
+}
