@@ -11,3 +11,5 @@ dist/
 .baseline/
 .baseline_src/
 .smoke-*/
+# local verification screenshots
+.shot/
